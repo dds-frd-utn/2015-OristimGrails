@@ -33,11 +33,11 @@
 
 <!-- Dropdown Structure -->
 <ul id="consolas" class="dropdown-content">
-  	<li><a id="consolasWindows" href="">Windows</a></li>
-  	<li><a id="consolasXbox" href="">Xbox</a></li>
+  	<li><a id="consolasWindows" href="#!">Windows</a></li>
+  	<li><a id="consolasXbox" href="#!">Xbox</a></li>
   	<li><a id="consolasPlayStation" href="#!">PlayStation</a></li>
   	<li class="divider"></li>
-  	<li><a href="">Todas</a></li>
+  	<li><a href="#!">Todas</a></li>
 </ul>  
 
 <!-- Dropdown Structure -->

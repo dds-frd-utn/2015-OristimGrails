@@ -1,4 +1,6 @@
- <!DOCTYPE HTML>
+<%@ page import="session.SessionManager" %>
+<%@ page import="session.UserSession" %>
+<!DOCTYPE HTML>
 <html>
 <head>
 	<!-- Librerias CSS Materialize y Material -->
@@ -25,18 +27,26 @@
  
  	<!-- Slider con imagenes de Juegos --> 
         <g:render template="components/gameSlider_view"/>
- 
+         
  	<div id= "show-frame" class="show-frame">
 	  	<h4>Ofertas</h4>
 	</div>	
-
+                    
+<% 
+//    Muestra el usuario actualmente creado.
+                        def smgr = new SessionManager(session);
+                        def u = smgr.getCurentUsr();
+                        if(u)
+                            out.println("Usuario Logeado <"+u.getUsername()+"> Esto va a estar hasta cerrar navegador");
+%>
+                    
   	<div class="section white">
 	    <div class="row container">
 		    <h2 class="header"><!-- Nuestros Juegos: --></h2>					 
 		    <!-- <p class="grey-text text-darken-3 lighten-3">Descripcion de la pagina</p>-->
 
 		    <!-- Mostrar Ofertas de Juegos -->
-                        <div id = "mostrarJuegos"></div>
+                        <!--<div id = "mostrarJuegos"></div>-->
                         <g:render template="components/listaOfertas_view"/>
 	    </div>
   	</div>  		  
