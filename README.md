@@ -10,14 +10,16 @@ https://docs.google.com/document/d/1bqvJG9M8WTRZPpiMZ9cD_ipyvGLqs8-y-86ZbU9FSI4
 Oristim = Origin + Steam.
 (Paginas de vistas HTML del TP2 de Diseño).
 
-# Cuestiones:
-De momento la pagina solo funciona para Firefox. No funciona en los demas navegadores.
 
-Para utilizarse con Google Chrome, por ejemplo, debe usarse un webserver, de lo contrario no funciona la inclusion de paginas html mediante la sentencia de jQuery:
+# Como usar Grails en Netbeans:
+Descargar Grails version 2.5 de la pagina oficial https://grails.org/download.html y tener instalado Java JDK 7 (Aunque creo que tambien funciona con la 8).
+La ultima version de Grails es la version 3.0.9, pero aparentemente no funciona en Netbeans.
+Una vez descargada hay que descomprimirla y guardarla el directorio c:\
 
-	
-	<script type="text/javascript">
-		$("#id_elem1").load("ruta1"); 
-		$("#id_elem2").load("ruta2"); 
-		$("#id_elem3").load("ruta3"); 	
-	</script>
+Descargar el plugin Groovy and Grails para Netbeans.
+
+Configurar Grails en Netbeans.
+
+y despues sale andando ...
+
+Mas informacion : https://netbeans.org/kb/docs/web/grails-quickstart.html
