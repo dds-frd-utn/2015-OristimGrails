@@ -18,7 +18,7 @@ La ultima version de Grails es la version 3.0.9, pero aparentemente no funciona 
 
 Una vez descargada hay que descomprimirla y guardarla el directorio c:\
 
-Descargar el plugin Groovy and Grails para Netbeans. (Pestaña: TOOLS > PLUGINS > AVAILABLE PLUGINS).
+Descargar el plugin Groovy and Grails para Netbeans. (Pestaña: Tools > Plugins > Available Plugins).
 
 Configurar Grails en Netbeans. (Tools > Options > Miscellaneous > Groovy)
 En la parte donde dice Grails Home, colocar la ruta donde se descomprimio Grails.
