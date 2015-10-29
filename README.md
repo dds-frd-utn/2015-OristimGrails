@@ -8,18 +8,28 @@ https://docs.google.com/document/d/1bqvJG9M8WTRZPpiMZ9cD_ipyvGLqs8-y-86ZbU9FSI4
 
 # Que es oristim?
 Oristim = Origin + Steam.
-(Paginas de vistas HTML del TP2 de Diseño).
+(Framework de TP2 de Diseño).
 
 
 # Como usar Grails en Netbeans:
 
-Descargar Grails version 2.5 de la pagina oficial https://grails.org/download.html.
+Descargar Grails version 2.5.1 de la pagina oficial https://grails.org/download.html.
 
-Tener instalado Java JDK 7 http://www.oracle.com/technetwork/es/java/javase/downloads/jdk7-downloads-1880260.html 
+Nuestro prouecto tiene las siguientes caracteristicas:
 
-La ultima version de Grails es la version 3.0.9, pero aparentemente no funciona en Netbeans.
+
+	Grails Metadata file
+	Wed Oct 28 01:39:17 ART 2015
+	app.grails.version=2.5.1
+	app.name=Oristim
+	app.version=0.1
+
 
 Una vez descargada hay que descomprimirla y guardarla el directorio c:\
+
+Grails no funciona bien con JDK8 por lo que hay que instalar JDK7.
+
+La ultima version de Grails es la version 3.0.9, pero aparentemente no funciona bien en Netbeans.
 
 <h4>Configurar Netbeans</h4>
 
@@ -31,17 +41,19 @@ En la parte donde dice Grails Home, colocar la ruta donde se descomprimio Grails
 
 Para crear un nuevo proyecto: Click derecho en el menu lateral. New Project > Groovy > Grails Application. Next, Next, Next ...
 
-y despues sale andando ...
+y despues sale andando ... (Todo esto puede hacerse con java 8 instalado).
 
 Mas informacion (web Netbeans): https://netbeans.org/kb/docs/web/grails-quickstart.html
 
 Mas informacion (web oficial grails): https://grails.org/wiki/NetBeans%20Integration
 
-Creo que ademas hay que tener instalado y configurado el Tomcat. http://tomcat.apache.org/download-80.cgi. Yo lo descomprimi en el disco C:\
+Hay que tener instalado y configurado el Tomcat. http://tomcat.apache.org/download-80.cgi. Yo lo descomprimi en el disco C:\
 
 <h4>Configurar JDK7</h4>
 
 (La maquina virtual de java se configura desde el JavaPlatformsManager: Tools > JavaPlatforms).
+
+Para correr bien la aplicacion ahora si, se debe instalar y configurar Java JDK 7.  http://www.oracle.com/technetwork/es/java/javase/downloads/jdk7-downloads-1880260.html 
 
 Para configurar proyecto con java 7 una vez creado, hay que ir a la barra lateral, click derecho en nuestro proyecto: Properties > Libraries > java Plataform JDK1.7. Aceptar.
 
