@@ -30,3 +30,10 @@ y despues sale andando ...
 Mas informacion : https://netbeans.org/kb/docs/web/grails-quickstart.html
 
 Creo que ademas hay que tener instalado y configurado el Tomcat. http://tomcat.apache.org/download-80.cgi
+
+# Config DB con el brasilero:
+
+https://www.youtube.com/watch?v=vYACT_sxT-4
+
+https://github.com/leandroguarino/RestauranteToComFome/blob/master/RestauranteToComFome/grails-app/conf/DataSource.groovy
+https://github.com/leandroguarino/RestauranteToComFome/blob/master/RestauranteToComFome/grails-app/conf/BuildConfig.groovy
