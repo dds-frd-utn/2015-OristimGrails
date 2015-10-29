@@ -12,7 +12,7 @@ Oristim = Origin + Steam.
 
 
 # Como usar Grails en Netbeans:
-Descargar Grails version 2.5 de la pagina oficial https://grails.org/download.html y tener instalado Java JDK 7 http://www.oracle.com/technetwork/es/java/javase/downloads/jdk7-downloads-1880260.html (Aunque creo que tambien funciona bien con la JDK 8).
+Descargar Grails version 2.5 de la pagina oficial https://grails.org/download.html y tener instalado Java JDK 7 http://www.oracle.com/technetwork/es/java/javase/downloads/jdk7-downloads-1880260.html 
 
 La ultima version de Grails es la version 3.0.9, pero aparentemente no funciona en Netbeans.
 
@@ -26,6 +26,10 @@ En la parte donde dice Grails Home, colocar la ruta donde se descomprimio Grails
 Para crear un nuevo proyecto: Click derecho en el menu lateral. New Project > Groovy > Grails Application. Next, Next, Next ...
 
 y despues sale andando ...
+
+Para configurar proyecto con java 7 una vez creado, hay que ir a la barra lateral, click derecho en nuestro proyecto: Properties > Libraries > java Plataform JDK1.7. Aceptar.
+
+Si no aparece JDK 7 hay que configurarlo mediante Manage Platforms.
 
 Mas informacion : https://netbeans.org/kb/docs/web/grails-quickstart.html
 
