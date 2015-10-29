@@ -3,11 +3,11 @@
 
 Proyecto de venta de videojuegos realizado por el Grupo 1 - Casas, Colussi, Moreira y Sanches
 
-Link a la documentacion:
+<h5>Documentacion</h5>
 
 https://docs.google.com/document/d/1bqvJG9M8WTRZPpiMZ9cD_ipyvGLqs8-y-86ZbU9FSI4
 
-Link a los casos de uso:
+<h5>Casos de uso</h5>
 
 https://drive.google.com/folderview?id=0B3zJYORyoL95VE5OVmNmejE3UG8&usp=sharing_eid&ts=563254ec
 
