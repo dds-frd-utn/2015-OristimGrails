@@ -21,6 +21,8 @@ La ultima version de Grails es la version 3.0.9, pero aparentemente no funciona 
 
 Una vez descargada hay que descomprimirla y guardarla el directorio c:\
 
+<h4>Configurar Netbeans</h4>
+
 Descargar el plugin Groovy and Grails para Netbeans. (Pestaña: Tools > Plugins > Available Plugins).
 
 Configurar Grails en Netbeans. (Tools > Options > Miscellaneous > Groovy)
@@ -39,11 +41,15 @@ Creo que ademas hay que tener instalado y configurado el Tomcat. http://tomcat.a
 
 <h4>Configurar JDK7</h4>
 
+(La maquina virtual de java se configura desde el JavaPlatformsManager: Tools > JavaPlatforms).
+
 Para configurar proyecto con java 7 una vez creado, hay que ir a la barra lateral, click derecho en nuestro proyecto: Properties > Libraries > java Plataform JDK1.7. Aceptar.
 
 Si no aparece JDK 7 hay que configurarlo mediante Manage Platforms.
 
 # Config DB orm con el brasilero:
+
+Esto permite que cada vez que creamos un objeto de clase de dominio y ejecutamos la accion Generate All (Generando asi todas las vistas y los controladores), automaticamente se mapee en la base de datos establecida creando asi, todas las tablas correspondientes.
 
 https://www.youtube.com/watch?v=vYACT_sxT-4
 
