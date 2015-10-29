@@ -62,7 +62,7 @@ Para configurar proyecto con java 7 una vez creado, hay que ir a la barra latera
 
 Si no aparece JDK 7 hay que configurarlo mediante Manage Platforms.
 
-# Config DB orm con el brasilero:
+# Config DB orm:
 
 Esto permite que cada vez que creamos un objeto de clase de dominio y ejecutamos la accion Generate All (Generando asi todas las vistas y los controladores), automaticamente se mapee en la base de datos establecida creando asi, todas las tablas correspondientes.
 
