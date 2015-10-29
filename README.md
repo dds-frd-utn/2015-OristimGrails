@@ -73,3 +73,5 @@ Repositorio brazuca:
 https://github.com/leandroguarino/RestauranteToComFome/blob/master/RestauranteToComFome/grails-app/conf/DataSource.groovy.
 
 https://github.com/leandroguarino/RestauranteToComFome/blob/master/RestauranteToComFome/grails-app/conf/BuildConfig.groovy.
+
+Agradecimientos: Se agradece al usuario Leandro Guarino - leandroguarino. Por haber ayudado con el tutorial.
