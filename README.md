@@ -12,7 +12,10 @@ Oristim = Origin + Steam.
 
 
 # Como usar Grails en Netbeans:
-Descargar Grails version 2.5 de la pagina oficial https://grails.org/download.html y tener instalado Java JDK 7 http://www.oracle.com/technetwork/es/java/javase/downloads/jdk7-downloads-1880260.html 
+
+Descargar Grails version 2.5 de la pagina oficial https://grails.org/download.html.
+
+Tener instalado Java JDK 7 http://www.oracle.com/technetwork/es/java/javase/downloads/jdk7-downloads-1880260.html 
 
 La ultima version de Grails es la version 3.0.9, pero aparentemente no funciona en Netbeans.
 
@@ -21,19 +24,24 @@ Una vez descargada hay que descomprimirla y guardarla el directorio c:\
 Descargar el plugin Groovy and Grails para Netbeans. (Pestaña: Tools > Plugins > Available Plugins).
 
 Configurar Grails en Netbeans. (Tools > Options > Miscellaneous > Groovy)
+
 En la parte donde dice Grails Home, colocar la ruta donde se descomprimio Grails.
 
 Para crear un nuevo proyecto: Click derecho en el menu lateral. New Project > Groovy > Grails Application. Next, Next, Next ...
 
 y despues sale andando ...
 
+Mas informacion (web Netbeans): https://netbeans.org/kb/docs/web/grails-quickstart.html
+
+Mas informacion (web oficial grails): https://grails.org/wiki/NetBeans%20Integration
+
+Creo que ademas hay que tener instalado y configurado el Tomcat. http://tomcat.apache.org/download-80.cgi. Yo lo descomprimi en el disco C:\
+
+<h4>Configurar JDK7</h4>
+
 Para configurar proyecto con java 7 una vez creado, hay que ir a la barra lateral, click derecho en nuestro proyecto: Properties > Libraries > java Plataform JDK1.7. Aceptar.
 
 Si no aparece JDK 7 hay que configurarlo mediante Manage Platforms.
-
-Mas informacion : https://netbeans.org/kb/docs/web/grails-quickstart.html
-
-Creo que ademas hay que tener instalado y configurado el Tomcat. http://tomcat.apache.org/download-80.cgi
 
 # Config DB orm con el brasilero:
 
