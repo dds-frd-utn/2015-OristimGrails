@@ -17,4 +17,5 @@ public  java.lang.Object invokeMethod(java.lang.String method, java.lang.Object 
 public  java.lang.Object getProperty(java.lang.String property) { return null;}
 public  void setProperty(java.lang.String property, java.lang.Object value) { }
 public  java.lang.Object index() { return null;}
+public  java.lang.Object logearse(java.lang.Object username, java.lang.Object password) { return null;}
 }
