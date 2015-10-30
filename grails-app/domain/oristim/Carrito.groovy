@@ -3,17 +3,16 @@ package oristim
 class Carrito {
 
 	Usuario usuario
-        List juegos
-        Character estado
-	
+    String estado
 	static hasMany = [juegos: Juego]
-	static belongsTo = [Usuario]
+	//static hasOne = [usuario:Usuario]
         
 	static mapping = {
 		version false
 	}
 
 	static constraints = {
-                usuario nullable: false
+                //usuario nullable: false
+                estado maxSize: 1
 	}
 }

@@ -10,8 +10,6 @@ class Juego {
 	String nombre
 	String plataforma
 	Double precio
-        
-        static belongsTo = [Carrito]
     
 	static mapping = {
 		version false

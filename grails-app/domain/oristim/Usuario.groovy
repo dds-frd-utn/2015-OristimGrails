@@ -8,9 +8,8 @@ class Usuario {
 	String apellido
 	String email
 
-	static hasMany = [carritos: Carrito]
-
 	static mapping = {
+		//username column: "username", sqlType: "varchar", length: 46
 		version false
 	}
 
