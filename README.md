@@ -62,9 +62,9 @@ Para configurar proyecto con java 7 una vez creado, hay que ir a la barra latera
 
 Si no aparece JDK 7 hay que configurarlo mediante Manage Platforms.
 
-# Usar Grails mediante consola y con sublime text:
+# Usar grails mediante consola y con sublime text:
 
-Si no te gusta usar un IDE, por complejidad, o poruqe a tu compu no le da el cuero, se hace esto:
+Si no te gusta usar un IDE, por complejidad, o porque a tu pc no le da el cuero, se hace esto:
 
 <h4>Configurar grails para consola:</h4>
 
@@ -115,4 +115,4 @@ https://github.com/leandroguarino/RestauranteToComFome/blob/master/RestauranteTo
 
 https://github.com/leandroguarino/RestauranteToComFome/blob/master/RestauranteToComFome/grails-app/conf/BuildConfig.groovy.
 
-Agradecimientos: Se agradece al usuario Leandro Guarino - leandroguarino. Por haber ayudado con el tutorial.
+Agradecimientos: Se agradece al usuario Leandro Guarino - leandroguarino. Por haber ayudado con el tutorial ORM.
