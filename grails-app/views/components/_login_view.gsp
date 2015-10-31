@@ -27,16 +27,13 @@
 
     // Lanzamos ajax de login. Pasamos al controlador login los campos de los formularios.
 	$( "#loginUser" ).click(function() {
-
         // Mandamos datos por post
         $.post("login",{
                 username: $( "#username" ).val(),
                 password: $( "#password" ).val()
             }).done(function( resp ) {
-   
                 if( resp == "Fail" ){
-                    Materialize.toast('Nombre de usuario o password incorrectos', 4000 , 'errorMsg');
-                    
+                    Materialize.toast('Nombre de usuario o password incorrectos', 4000 , 'errorMsg');          
                 }
                 else{
                     // Si la respuesta es Sucess, recargar la pagina.

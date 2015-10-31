@@ -79,7 +79,16 @@
 <div id="llenar"></div>
 <script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript">
+
+	// Codigo de ejemplo. Mejorar. Si el usuario no esta logeado, lanzar la ventana de login.
 	$("#buttonAdd").click(function(){
-		Materialize.toast('Agregado al carrito', 3000 , 'rounded');
+		$.post("login/isSessionActive").done(function( resp ) {
+            if(resp == "false"){
+        		$("#loginLink").click();
+            }
+            else{
+            	Materialize.toast('Agregado al carrito', 3000 , 'rounded');
+            }    
+        });
 	});
 </script>

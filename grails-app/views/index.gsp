@@ -42,10 +42,9 @@
 
 <!-- Footer de la pagina -->
 	<g:render template="components/pageFooter_view"/>
-
+</html> 
 <!-- Incluir Scripts -->
 <script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript" src="./materialize/js/materialize.min.js"></script>
 <!-- Iniciar Librerias Propias JS -->
 <script type="text/javascript" src="./js/common.js"></script>
-</html> 

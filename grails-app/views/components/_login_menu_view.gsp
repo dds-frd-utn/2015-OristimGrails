@@ -13,7 +13,7 @@
 			out.println( u.getNombre()+" "+u.getApellido() )
 		}
 		else{
-			out.println("Usuario")
+			out.println("Login")
 		}%>
 		<i class="material-icons right">arrow_drop_down</i>
 	</a>
@@ -25,7 +25,7 @@
 		<li><a id="logoutUser" href="#!">Cerrar Sesion</a></li>
   	<%
   	}else{%>
-  		<li><a class="modal-trigger" href="#login">Iniciar Sesion</a></li>  		
+  		<li><a id="loginLink" class="modal-trigger" href="#login">Iniciar Sesion</a></li>  		
   	<%}%>
 </ul>
 

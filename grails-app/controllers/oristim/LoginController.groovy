@@ -35,4 +35,11 @@ class LoginController {
         smgr.eliminarSesion()
     }
 
+    //Hay un usuario logeado?
+    def isSessionActive(){
+        def mySession = request.session
+        def smgr = new SessionManager(mySession)
+        render smgr.isActive()
+    }
+
 }
