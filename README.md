@@ -34,7 +34,7 @@ Grails no funciona bien con JDK8 por lo que hay que instalar JDK7.
 
 La ultima version de Grails es la version 3.0.9, pero aparentemente no funciona bien en Netbeans.
 
-<h4>Configurar Netbeans</h4>
+<h4>Configurar Netbeans:</h4>
 
 Descargar el plugin Groovy and Grails para Netbeans. (Pestaña: Tools > Plugins > Available Plugins).
 
@@ -52,7 +52,7 @@ Mas informacion (web oficial grails): https://grails.org/wiki/NetBeans%20Integra
 
 Hay que tener instalado y configurado el Tomcat. http://tomcat.apache.org/download-80.cgi. Yo lo descomprimi en el disco C:\
 
-<h4>Configurar JDK7</h4>
+<h4>Configurar JDK7:</h4>
 
 (La maquina virtual de java se configura desde el JavaPlatformsManager: Tools > JavaPlatforms).
 
@@ -61,6 +61,47 @@ Para correr bien la aplicacion ahora si, se debe instalar y configurar Java JDK 
 Para configurar proyecto con java 7 una vez creado, hay que ir a la barra lateral, click derecho en nuestro proyecto: Properties > Libraries > java Plataform JDK1.7. Aceptar.
 
 Si no aparece JDK 7 hay que configurarlo mediante Manage Platforms.
+
+# Usar grails mediante consola y con sublime text:
+
+Si no te gusta usar un IDE, por complejidad, o porque a tu pc no le da el cuero, se hace esto:
+
+<h4>Configurar grails para consola:</h4>
+
+https://grails.org/wiki/installation
+
+Descargar y descomprimir grails en el disco c:\
+
+Crear la variable de entrono GRAILS_HOME y setearle la ruta  donde instalaste (C:\grails)
+
+Setear la variable JAVA_HOME con la ruta donde instalaste java (JDK7) C:\Program Files\Java\jdk1.7.0_80
+
+Modificar la variable PATH y agregarle al final lo siguiente %GRAILS_HOME%\bin
+
+Abrir la consola CMD y escribir "grails". Si no muestra ningun mensaje raro, es porque funciona.
+
+<h4>Configurar Sublime:</h4>
+
+Ejecutar packcage control: install packcage. (Ctrl shift p)
+
+Buscar el paquete "Grails". Instalarlo. Una vez terminada la istalacion, sublime va a reconocer la sintaxis de grails.
+
+<h4>Comandos de consola:</h4>
+
+Mediante la consola hay que posicionarse en la carpeta donde tenemos nuestro proyecto, o donde lo queremos crear.
+
+Seguimos los comandos de este ejemplo https://grails.org/wiki/Quick%20Start.
+
+Mediante la consola hay que ejecutar los comandos para crear controladores, clases de dominio, o el generate-all para las vistas.
+
+Para correr la aplicacion se ejecuta el comando
+
+C:\CarpetaRaizDeTuproyecto> grails RunApp
+
+Luego la consola muestra: "Server running. Browse to http://localhost:8080/Proyecto"
+
+ejecutas esa URL en el navegador.
+
 
 # Config DB orm:
 
@@ -74,4 +115,4 @@ https://github.com/leandroguarino/RestauranteToComFome/blob/master/RestauranteTo
 
 https://github.com/leandroguarino/RestauranteToComFome/blob/master/RestauranteToComFome/grails-app/conf/BuildConfig.groovy.
 
-Agradecimientos: Se agradece al usuario Leandro Guarino - leandroguarino. Por haber ayudado con el tutorial.
+Agradecimientos: Se agradece al usuario Leandro Guarino - leandroguarino. Por haber ayudado con el tutorial ORM.
