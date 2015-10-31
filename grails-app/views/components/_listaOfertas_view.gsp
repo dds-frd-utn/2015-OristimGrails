@@ -77,6 +77,7 @@
 </div>
 
 <div id="llenar"></div>
+<script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript">
 	$("#buttonAdd").click(function(){
 		Materialize.toast('Agregado al carrito', 3000 , 'rounded');

@@ -11,27 +11,28 @@
 	    <ul class="left hide-on-med-and-down">
 	    	<li><a id="ofertas" href="#!">Ofertas</a></li>
 	      	
-	      	<!-- Dropdown Trigger -->
+	      	<!-- Activar Dropdown de Consolas -->
 	      	<li><a class="dropdown-button" href="#!" data-activates="consolas">Consolas<i class="material-icons right">arrow_drop_down</i></a></li>
 
-	      	<!-- Dropdown Trigger -->
+	      	<!-- Activar Dropdown de Genero -->
 	      	<li><a class="dropdown-button" href="#!" data-activates="genero">Genero<i class="material-icons right">arrow_drop_down</i></a></li>
 
 	    </ul>
 
 	    <ul class="right hide-on-med-and-down">
-	      <!-- Dropdown Trigger -->
+	      <!-- Activar Dropdown de Carrito de Compras -->
 	      	<li>
 	      		  <a class="modal-trigger" href="#carritoCompras"><i class="large material-icons">shopping_cart</i></a>
 	      	</li>
-	      	<li><a class="dropdown-button" href="#!" data-activates="usuario">Usuario<i class="material-icons right">arrow_drop_down</i></a></li>
+	      <!-- Activar Dropdown de Login (Cargado mediante Vista)-->
+			<g:render template="components/login_menu_view"/>
 	    </ul>
 
 	  </div>
 	</nav>
 </div>
 
-<!-- Dropdown Structure -->
+<!-- Dropdown Consolas -->
 <ul id="consolas" class="dropdown-content">
   	<li><a id="consolasWindows" href="#!">Windows</a></li>
   	<li><a id="consolasXbox" href="#!">Xbox</a></li>
@@ -40,7 +41,7 @@
   	<li><a href="#!">Todas</a></li>
 </ul>  
 
-<!-- Dropdown Structure -->
+<!-- Dropdown Genero -->
 <ul id="genero" class="dropdown-content">
   	<li><a id = "generoDisparo"  href="#!">FPS</a></li>
   	<li><a id = "generoRol" 	 href="#!">Rol</a></li>
@@ -48,14 +49,6 @@
   	<li class="divider"></li>
   	<li><a href="">Todas</a></li>
 </ul>  
-
-<!-- Dropdown Usuario -->
-<ul id="usuario" class="dropdown-content">
-  	<li><a href="#!">Informacion de Usuario</a></li>
-  	<li><a class="modal-trigger" href="#login">Iniciar Sesion</a></li>
-  	<li class="divider"></li>
-  	<li><a id="logoutUser" href="#!">Cerrar Sesion</a></li>
-</ul>
 
 <!-- Modal Carrito de Compras -->
 <g:render template="components/carritoCompras_view"/>
@@ -91,10 +84,6 @@
 		$("#mostrarJuegos").load("./components/generoDisparo_view.html");
 	});
 
-	$( "#logoutUser" ).click(function() {
-        $.post( "login/logout" );
-        window.location.reload();	          
-  	});
 </script>
 
 

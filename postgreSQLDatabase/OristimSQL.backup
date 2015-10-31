@@ -1,0 +1,330 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.4.4
+-- Dumped by pg_dump version 9.4.0
+-- Started on 2015-10-31 12:17:17
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'SQL_ASCII';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 178 (class 3079 OID 11855)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2042 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 172 (class 1259 OID 17256)
+-- Name: carrito; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE carrito (
+    id bigint NOT NULL,
+    estado character varying(1) NOT NULL,
+    usuario_id bigint NOT NULL
+);
+
+
+ALTER TABLE carrito OWNER TO postgres;
+
+--
+-- TOC entry 173 (class 1259 OID 17261)
+-- Name: carrito_juego; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE carrito_juego (
+    carrito_juegos_id bigint,
+    juego_id bigint
+);
+
+
+ALTER TABLE carrito_juego OWNER TO postgres;
+
+--
+-- TOC entry 177 (class 1259 OID 17312)
+-- Name: hibernate_sequence; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE hibernate_sequence
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE hibernate_sequence OWNER TO postgres;
+
+--
+-- TOC entry 174 (class 1259 OID 17264)
+-- Name: juego; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE juego (
+    id bigint NOT NULL,
+    alias character varying(45),
+    categoria character varying(45) NOT NULL,
+    descripcion character varying(255),
+    imgroute character varying(45),
+    informacion character varying(255),
+    nombre character varying(45) NOT NULL,
+    plataforma character varying(45) NOT NULL,
+    precio double precision NOT NULL
+);
+
+
+ALTER TABLE juego OWNER TO postgres;
+
+--
+-- TOC entry 175 (class 1259 OID 17276)
+-- Name: usuario; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE usuario (
+    id bigint NOT NULL,
+    apellido character varying(45) NOT NULL,
+    email character varying(45) NOT NULL,
+    nombre character varying(45) NOT NULL,
+    password character varying(45) NOT NULL,
+    username character varying(45) NOT NULL
+);
+
+
+ALTER TABLE usuario OWNER TO postgres;
+
+--
+-- TOC entry 176 (class 1259 OID 17285)
+-- Name: venta; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE venta (
+    id bigint NOT NULL,
+    carrito_id bigint NOT NULL,
+    fecha timestamp without time zone NOT NULL,
+    total double precision NOT NULL
+);
+
+
+ALTER TABLE venta OWNER TO postgres;
+
+--
+-- TOC entry 2029 (class 0 OID 17256)
+-- Dependencies: 172
+-- Data for Name: carrito; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY carrito (id, estado, usuario_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2030 (class 0 OID 17261)
+-- Dependencies: 173
+-- Data for Name: carrito_juego; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY carrito_juego (carrito_juegos_id, juego_id) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2043 (class 0 OID 0)
+-- Dependencies: 177
+-- Name: hibernate_sequence; Type: SEQUENCE SET; Schema: public; Owner: postgres
+--
+
+SELECT pg_catalog.setval('hibernate_sequence', 4, true);
+
+
+--
+-- TOC entry 2031 (class 0 OID 17264)
+-- Dependencies: 174
+-- Data for Name: juego; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY juego (id, alias, categoria, descripcion, imgroute, informacion, nombre, plataforma, precio) FROM stdin;
+\.
+
+
+--
+-- TOC entry 2032 (class 0 OID 17276)
+-- Dependencies: 175
+-- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY usuario (id, apellido, email, nombre, password, username) FROM stdin;
+2	Sanches	f@gmail.com	Federico	fede1234	fsanches
+1	Colussi	d@gmail.com	Diego	diego1234	dcolussi
+3	Casas	e@gmail.com	Emiliano	emiliano1234	ecasas
+4	Moreira	j@gmail.com	Jhonatan	jhony1234	jmoreira
+\.
+
+
+--
+-- TOC entry 2033 (class 0 OID 17285)
+-- Dependencies: 176
+-- Data for Name: venta; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY venta (id, carrito_id, fecha, total) FROM stdin;
+\.
+
+
+--
+-- TOC entry 1899 (class 2606 OID 17260)
+-- Name: carrito_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY carrito
+    ADD CONSTRAINT carrito_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1901 (class 2606 OID 17273)
+-- Name: juego_alias_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY juego
+    ADD CONSTRAINT juego_alias_key UNIQUE (alias);
+
+
+--
+-- TOC entry 1903 (class 2606 OID 17275)
+-- Name: juego_nombre_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY juego
+    ADD CONSTRAINT juego_nombre_key UNIQUE (nombre);
+
+
+--
+-- TOC entry 1905 (class 2606 OID 17271)
+-- Name: juego_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY juego
+    ADD CONSTRAINT juego_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1907 (class 2606 OID 17282)
+-- Name: usuario_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuario
+    ADD CONSTRAINT usuario_email_key UNIQUE (email);
+
+
+--
+-- TOC entry 1909 (class 2606 OID 17280)
+-- Name: usuario_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuario
+    ADD CONSTRAINT usuario_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1911 (class 2606 OID 17284)
+-- Name: usuario_username_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY usuario
+    ADD CONSTRAINT usuario_username_key UNIQUE (username);
+
+
+--
+-- TOC entry 1913 (class 2606 OID 17291)
+-- Name: venta_carrito_id_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY venta
+    ADD CONSTRAINT venta_carrito_id_key UNIQUE (carrito_id);
+
+
+--
+-- TOC entry 1915 (class 2606 OID 17289)
+-- Name: venta_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+--
+
+ALTER TABLE ONLY venta
+    ADD CONSTRAINT venta_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1916 (class 2606 OID 17292)
+-- Name: fk210ae0c632119b17; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY carrito
+    ADD CONSTRAINT fk210ae0c632119b17 FOREIGN KEY (usuario_id) REFERENCES usuario(id);
+
+
+--
+-- TOC entry 1919 (class 2606 OID 17307)
+-- Name: fk6ae6a4cfdf39417; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY venta
+    ADD CONSTRAINT fk6ae6a4cfdf39417 FOREIGN KEY (carrito_id) REFERENCES carrito(id);
+
+
+--
+-- TOC entry 1918 (class 2606 OID 17302)
+-- Name: fkb79d8a292c9271d7; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY carrito_juego
+    ADD CONSTRAINT fkb79d8a292c9271d7 FOREIGN KEY (juego_id) REFERENCES juego(id);
+
+
+--
+-- TOC entry 1917 (class 2606 OID 17297)
+-- Name: fkb79d8a2994f06f3; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY carrito_juego
+    ADD CONSTRAINT fkb79d8a2994f06f3 FOREIGN KEY (carrito_juegos_id) REFERENCES carrito(id);
+
+
+--
+-- TOC entry 2041 (class 0 OID 0)
+-- Dependencies: 5
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2015-10-31 12:17:17
+
+--
+-- PostgreSQL database dump complete
+--
+

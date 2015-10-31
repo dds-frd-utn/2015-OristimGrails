@@ -1,4 +1,4 @@
-<!-- Modal Structure -->
+<!-- Modal Structure de Carrito de Compras -->
 <div id="carritoCompras" class="modal modal-fixed-footer">
 	<div class="modal-content">
 	  <h4>Carrito de Compras</h4>
@@ -17,6 +17,7 @@
 	  	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
 	</div>
 </div>
+<script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript">
 	$("#checkOut").click(function(){
 		Materialize.toast('Checkout realizado !', 7000 , null)
