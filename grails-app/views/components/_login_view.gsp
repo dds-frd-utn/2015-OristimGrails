@@ -24,34 +24,21 @@
 </div>
 <script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript">
+
     	$( "#loginUser" ).click(function() {
-            // alert("holamundo");
-            // email = $( "#email" ).val();
-            // pass = $( "#password" ).val();
-            // window.location.replace("login");
-            $.ajax({
-                type: "POST",
-                url: "login",
-                data: {
-                    username: $( "#username" ).val(),
-                    password: $( "#password" ).val()
-                },
-                success: function(){
-                     alert("hola")
-                },
-                dataType: String
-            }); 
 
             $.post("login",{
                     username: $( "#username" ).val(),
                     password: $( "#password" ).val()
-                }).done(function( data ) {
-                    
-                    if( data == "Fail" ){
+                }).done(function( resp ) {
+       
+                    if( resp == "Fail" ){
                         alert("Fallo al iniciar sesion");
                     }
+                    
                     window.location.reload();                 
-                });
+            });
 
   	    });
+
 </script>
