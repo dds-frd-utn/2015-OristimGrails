@@ -1,6 +1,7 @@
 package session;
 
 import javax.servlet.http.HttpSession;
+import oristim.Usuario;
 
 //Session Manager se encarga de la administracion de la sesion del usuario en el sistema.
 public class SessionManager {
@@ -15,8 +16,17 @@ public class SessionManager {
 		session = s;
 		sesId = "USER_S1";
 		this.setDefaultTimeOut();
+		// this.defaultUser();
 	}
 	
+// 	Crear una sesion Usuario por default
+	public void defaultUser(){
+		Usuario usr = new Usuario();
+		usr.setUsername("prueba");
+		usr.setNombre("prueba");
+		this.session.setAttribute(sesId, usr);
+	}
+
 //	Setea un nuevo Timeout de la sesion.
 	public void setNewTimeOut(Integer i){
 		session.setMaxInactiveInterval(i);
@@ -33,8 +43,8 @@ public class SessionManager {
 	}
 	
 // 	Crea una sesion en el sistema.
-//	Necesitamos pasar como parametro un objeto UserSession. (No hace falta que tenga todos sus atributos definidos)
-	public void crearSesion(UserSession usr){	
+//	Necesitamos pasar como parametro un objeto Usuario. (No hace falta que tenga todos sus atributos definidos)
+	public void crearSesion(Usuario usr){	
 		
 //		Se crea la variable de sesion. Por default, su id sera USER_S1.
 		this.session.setAttribute(sesId, usr);
@@ -42,8 +52,8 @@ public class SessionManager {
 	}
 	
 //	Devuelve el usuario asociado a la sesion creada. Si la sesion no tiene nada, retornara null.
-	public UserSession getCurentUsr(){
-		return (UserSession) session.getAttribute(sesId);		
+	public Usuario getCurrentUsr(){
+		return (Usuario) session.getAttribute(sesId);		
 	}
 	
 //	Realiza lo mismo que el caso anterior, solo que lo devuelve como clase Object (Metodo privado).

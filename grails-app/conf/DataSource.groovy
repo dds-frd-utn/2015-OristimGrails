@@ -12,7 +12,7 @@ hibernate {
 environments {
 	development {
 		dataSource {
-			dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+			dbCreate = "validate" // one of 'create', 'create-drop', 'update', 'validate', ''
 			url = "jdbc:postgresql://localhost/oristim"
 			username = "postgres"
 			password = "postgres"
@@ -20,7 +20,7 @@ environments {
 	}
 	test {
 		dataSource {
-			dbCreate = "create-drop"
+			dbCreate = "validate"
 			url = "jdbc:postgresql://localhost/oristim"
 			username = "postgres"
 			password = "postgres"
@@ -28,7 +28,7 @@ environments {
 	}
 	production {
 		dataSource {
-			dbCreate = "create-drop"
+			dbCreate = "validate"
 			url = "jdbc:postgresql://localhost/oristim"
 			username = "postgres"
 			password = "postgres"

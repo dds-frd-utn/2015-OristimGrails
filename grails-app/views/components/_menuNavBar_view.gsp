@@ -54,7 +54,7 @@
   	<li><a href="#!">Informacion de Usuario</a></li>
   	<li><a class="modal-trigger" href="#login">Iniciar Sesion</a></li>
   	<li class="divider"></li>
-  	<li><a href="#!">Cerrar Sesion</a></li>
+  	<li><a id="logoutUser" href="#!">Cerrar Sesion</a></li>
 </ul>
 
 <!-- Modal Carrito de Compras -->
@@ -62,6 +62,7 @@
 <!-- Modal de Login -->
 <g:render template="components/login_view"/>
 
+<script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript">	
 	/*Cargar Dinamicamente Links*/
         
@@ -89,6 +90,11 @@
 		$("#show-frame").html("<h4>Genero: Disparo</h4>");
 		$("#mostrarJuegos").load("./components/generoDisparo_view.html");
 	});
+
+	$( "#logoutUser" ).click(function() {
+        $.post( "login/logout" );
+        window.location.reload();	          
+  	});
 </script>
 
 

@@ -35,9 +35,9 @@
 <% 
 //    Muestra el usuario actualmente creado.
                         def smgr = new SessionManager(session);
-                        def u = smgr.getCurentUsr();
+                        def u = smgr.getCurrentUsr();
                         if(u)
-                            out.println("Usuario Logeado <"+u.getUsername()+"> Esto va a estar hasta cerrar navegador");
+                            out.println("Usuario Logeado <"+u.getNombre()+u.getApellido()+"> Esto va a estar hasta cerrar navegador");
 %>
                     
   	<div class="section white">
