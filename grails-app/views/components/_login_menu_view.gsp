@@ -1,12 +1,4 @@
 <%@ page import="session.SessionManager" %>
-<% 
-	// Usuario actualmente en sesion.
-    def smgr = new SessionManager(session);
-    def u = smgr.getCurrentUsr();
-    // if(u)
-    //     out.println("Usuario Logeado <"+u.getNombre()+u.getApellido()+"> Esto va a estar hasta cerrar navegador");
-%>
-
 <li>
 	<a class="dropdown-button" href="#!" data-activates="usuario">
 		<%if(u){

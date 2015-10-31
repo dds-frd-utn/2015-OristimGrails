@@ -1,3 +1,4 @@
+<%@ page import="oristim.Juego" %>
 <style type="text/css">
 	.price{
 		text-align: center;
@@ -14,80 +15,51 @@
 		margin-top: 4px;
 	}
 </style>
-<!-- Una Etiqueta de Juego -->
-<div class="col s12 m7" >  
-    <div class="card medium">
-	    <div class="card-image waves-effect waves-block waves-light">
-	    	<img class="activator" src="img/img4.jpg">
-	    </div>
-	   	<div class="price"><p>Valor: $200</p></div>
-	    <div class="card-content">
-	      	<span class="card-title activator grey-text text-darken-4">World Of Warcraft<i class="material-icons right">more_vert</i></span>
-	      	<p><a href="#">Mas informacion</a></p>
-	    </div>
-	    <div class="card-reveal">
-	      	<span class="card-title grey-text text-darken-4">Descripcion:<i class="material-icons right">close</i></span>
-	      	<p>Descripcion del Juego</p>	      		
-	 
-	      	<a id="buttonAdd" class="btn-floating btn-large waves-effect waves-light red">Buy</a>
-	    </div>
-	</div>  
-</div>
 
-<!-- Una Etiqueta de Juego -->
-<div class="col s12 m7" >  
-    <div class="card medium">
-	    <div class="card-image waves-effect waves-block waves-light">
-	    	<img class="activator" src="img/img3.jpg">
-	    </div>
-	    <div class="price"><p>Valor: $200</p></div>
-	    <div class="card-content">
-	      	<span class="card-title activator grey-text text-darken-4">Medal of Honor<i class="material-icons right">more_vert</i></span>
-	      	<p><a href="#">Mas Informacion</a></p>
-	    </div>
-	    <div class="card-reveal">
-	      	<span class="card-title grey-text text-darken-4">Descripcion:<i class="material-icons right">close</i></span>
-	      	<p>
-	      		Descripcion del Juego
-	      	</p>
-	      	<a class="btn-floating btn-large waves-effect waves-light red">Buy</a>
-	    </div>
-	</div>  
-</div>
+%{-- Ruta de imagenes para juegos. De la forma: "img/juego1.jpg" --}%
+<% def juegosList= Juego.getAll()%>
+<g:each in="${juegosList}">
+    <div class="col s12 m7" >  
+	    <div class="card medium">
+		    <div class="card-image waves-effect waves-block waves-light">
+		    	<img class="activator" src="${it.imgroute}">
+		    </div>
+		   	<div class="price"><p>Valor: ${it.precio}</p></div>
+		    <div class="card-content">
+		      	<span class="card-title activator grey-text text-darken-4">
+		      		${it.nombre}
+		      		<i class="material-icons right">more_vert</i>
+		      	</span>
+		      	<p><a href="#">Mas informacion</a></p>
+		    </div>
+		    <div class="card-reveal">
+		      	<span class="card-title grey-text text-darken-4">
+		      		Informacion:
+		      		<i class="material-icons right">close</i>
+		      	</span>
+		      	<p>${it.informacion}</p>	      		
+		      	<a id="${it.id}" class="btnAddGme btn-floating btn-large waves-effect waves-light red">Buy</a>
+		    </div>
+		</div>  
+	</div>
+</g:each>
 
-<!-- Una Etiqueta de Juego -->
-<div class="col s12 m7" >  
-    <div class="card medium">
-	    <div class="card-image waves-effect waves-block waves-light">
-	    	<img class="activator" src="img/img5.jpg">
-	    </div>
-	    <div class="price"><p>Valor: $200</p></div>
-	    <div class="card-content">
-	      	<span class="card-title activator grey-text text-darken-4">Age of Empires<i class="material-icons right">more_vert</i></span>
-	      	<p><a href="#">Mas Informacion</a></p>
-	    </div>
-	    <div class="card-reveal">
-	      	<span class="card-title grey-text text-darken-4">Descripcion:<i class="material-icons right">close</i></span>
-	      	<p>
-	      		Descripcion del Juego
-	      	</p>
-	      	<a class="btn-floating btn-large waves-effect waves-light red">Buy</a>
-	    </div>
-	</div>  
-</div>
-
-<div id="llenar"></div>
 <script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript">
+	// Cuando se hace click en algun boton de la clase btnAddGame...
+	$(".btnAddGme").click(function(){
+		
+		// Capturamos el id del boton (Representa id de un juego).
+		var gameId = parseInt( $(this).attr('id') );
 
-	// Codigo de ejemplo. Mejorar. Si el usuario no esta logeado, lanzar la ventana de login.
-	$("#buttonAdd").click(function(){
 		$.post("login/isSessionActive").done(function( resp ) {
             if(resp == "false"){
         		$("#loginLink").click();
             }
             else{
-            	Materialize.toast('Agregado al carrito', 3000 , 'rounded');
+            	// Aca codificamos que es lo que sucede si el usuario esta logeado
+            	// y quiere agregar un juego al carrito.
+            	Materialize.toast('Agregado al carrito. (Id = '+gameId+' )', 3000 , 'rounded');
             }    
         });
 	});
