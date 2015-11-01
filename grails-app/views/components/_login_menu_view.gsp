@@ -1,4 +1,9 @@
 <%@ page import="session.SessionManager" %>
+<%
+	// Creamos un manejador de sesion y traemos la informacion del usuario actual.
+	def smgr = new SessionManager(request.session)
+	def u = smgr.getCurrentUsr();
+%>
 <li>
 	<a class="dropdown-button" href="#!" data-activates="usuario">
 		<%if(u){

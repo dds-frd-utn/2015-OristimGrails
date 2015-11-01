@@ -21,6 +21,7 @@ class Usuario {
 		email nullable: false, maxSize: 45, unique: true
 	}
 
+	// Defino los seters y los geters solo porque la clase Session Manager los necesita.
 	String getUsername(){
 		return username
 	}

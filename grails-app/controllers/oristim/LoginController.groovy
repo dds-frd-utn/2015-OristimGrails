@@ -2,7 +2,6 @@ package oristim
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpSession
 import session.SessionManager
-import session.UserSession
 
 class LoginController {
     
@@ -17,8 +16,7 @@ class LoginController {
 
         // Si el usuario existe, guardarlo en la sesion. Retornar el string Success
         if(user){
-            def mySession = request.session
-            def smgr = new SessionManager(mySession)
+            def smgr = new SessionManager(request.session)
             smgr.crearSesion(user) 
             render("Success")   
         }
