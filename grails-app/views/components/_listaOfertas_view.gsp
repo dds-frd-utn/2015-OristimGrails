@@ -24,7 +24,9 @@
 		    <div class="card-image waves-effect waves-block waves-light">
 		    	<img class="activator" src="${it.imgroute}">
 		    </div>
-		   	<div class="price"><p>Valor: ${it.precio}</p></div>
+		   	<div class="price">
+		   		<p>Valor: $${it.precio}</p>
+		   	</div>
 		    <div class="card-content">
 		      	<span class="card-title activator grey-text text-darken-4">
 		      		${it.nombre}
@@ -38,7 +40,12 @@
 		      		<i class="material-icons right">close</i>
 		      	</span>
 		      	<p>${it.informacion}</p>	      		
-		      	<a id="${it.id}" class="btnAddGme btn-floating btn-large waves-effect waves-light red">Buy</a>
+		      	%{-- <a id="${it.id}" class="btnAddGme btn-floating btn-large waves-effect waves-light red">
+		      		ADD
+		      	</a> --}%
+		      	<a href="#!" id="${it.id}" class="btnAddGme waves-effect waves-light btn">
+		      		Comprar
+		      	</a>
 		    </div>
 		</div>  
 	</div>
@@ -53,13 +60,16 @@
 		var gameId = parseInt( $(this).attr('id') );
 
 		$.post("login/isSessionActive").done(function( resp ) {
-            if(resp == "false"){
+
+            if( resp == 'false' ){
         		$("#loginLink").click();
             }
             else{
-            	// Aca codificamos que es lo que sucede si el usuario esta logeado
-            	// y quiere agregar un juego al carrito.
-            	Materialize.toast('Agregado al carrito. (Id = '+gameId+' )', 3000 , 'rounded');
+            	/*Codificar aca lo que sucede cuando el usuario esta logeado y quiere agregar
+            	algo al carrito*/
+            	// Muestra un toast con un mensaje.
+            	// Materialize.toast('Agregado al carrito. (Id = '+gameId+' )', 3000 , 'rounded');
+            	Materialize.toast('Agregado al carrito. (Id = '+gameId+' )', 3000);
             }    
         });
 	});

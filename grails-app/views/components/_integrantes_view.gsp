@@ -1,4 +1,4 @@
-<!-- Modal Structure -->
+%{-- Modal Integrante: Emilano --}%
 <div id="emiliano" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Emiliano Casas</h4>
@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<!-- Modal Structure -->
+%{-- Modal Integrante: Fede --}%
 <div id="fede" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Fede Sanches</h4> 
@@ -22,7 +22,7 @@
   </div>
 </div>
 
-<!-- Modal Structure -->
+%{-- Modal Integrante: Moreira --}%
 <div id="jhony" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Jhonatan Moreira</h4> 
@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<!-- Modal Structure -->
+%{-- Modal Integrante: Diego --}%
 <div id="diego" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Diego Colussi</h4>

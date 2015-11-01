@@ -1,8 +1,8 @@
 <!-- Modal Structure de Pantalla de Login -->
 <div id="login" class="modal">
             <div class="modal-content">
-              <h4>Iniciar Sesion</h4>
-                        %{-- <p id="errorMsg" class="errorText"></p> --}%
+                <h4>Iniciar Sesion</h4>
+                        
                         <div class="row">
                             <div class="input-field col s12">
                                 <input id="username" type="text" class="validate">
@@ -15,8 +15,8 @@
                                 <input id="password" type="password" class="validate">
                                 <label for="password">Password</label>
                             </div>
-                        </div>
-                    
+                        </div>               
+                        
             </div>
             <div class="modal-footer">
                     <a id="loginUser" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Login</a>

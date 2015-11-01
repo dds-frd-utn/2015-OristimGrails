@@ -2,9 +2,6 @@
 <html>
 <head>
 	<!-- Librerias CSS Materialize y Material -->
-	<!-- <link rel="stylesheet" href="./mdl/material.min.css">
-	<script src="./mdl/material.min.js"></script> -->
-
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css"  media="screen,projection"/>
 
@@ -20,28 +17,38 @@
 
 <!-- INICIO PAGINA -->
 <body>
+
 	<!-- Barra de Navegacion de la pagina -->
-        <g:render template="components/menuNavBar_view"/>
+    <g:render template="components/menuNavBar_view"/>
  
  	<!-- Slider con imagenes de Juegos --> 
-        <g:render template="components/gameSlider_view"/>
+    <g:render template="components/gameSlider_view"/>
          
  	<div id= "show-frame" class="show-frame">
 	  	<h4>Ofertas</h4>
 	</div>	
-                                       
+
+	%{-- Ver controladores. Esto se borra luego --}%
+	<div id="controller-list" role="navigation">
+		<h5>Available Controllers (borrar luego):</h5>
+		<ul>
+			<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
+				<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
+			</g:each>
+		</ul>
+	</div>
+
   	<div class="section white">
-	    <div class="row container">
-		    <h2 class="header"><!-- Nuestros Juegos: --></h2>					 
-		    <!-- <p class="grey-text text-darken-3 lighten-3">Descripcion de la pagina</p>-->
-		    <!-- Mostrar Ofertas de Juegos -->
+	    <div class="row container">				 
+			    <!-- Mostrar Ofertas de Juegos -->
             	<g:render template="components/listaOfertas_view"/>
 	    </div>
   	</div>  		  
 </body>
 
 <!-- Footer de la pagina -->
-	<g:render template="components/pageFooter_view"/>
+<g:render template="components/pageFooter_view"/>
+
 </html> 
 <!-- Incluir Scripts -->
 <script type="text/javascript" src="./jquery/jquery.js"></script>

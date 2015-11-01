@@ -29,6 +29,7 @@
 <script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript">	
 	$( "#logoutUser" ).click(function() {
+		// Ejecuta el controlador LoginController metodo logout()
         $.post( "login/logout" );
         window.location.reload();	          
   	});

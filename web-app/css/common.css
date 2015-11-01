@@ -133,8 +133,9 @@ nav ,.nav-wrapper , .navbar-fixed{
 .toast , .rounded{
     /*background-color: green;*/
     /*background-color: #5F95B7;*/
-    /*background-color: #11A2FE;*/
-    background-color: #445453;
+    background-color: #11A2FE;
+    /*background-color: #445453;*/
+    /*background-color: #445453;*/
 }
 
 .slider {

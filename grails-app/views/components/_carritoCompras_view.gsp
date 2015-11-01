@@ -9,14 +9,18 @@
         	<a href="#!" class="collection-item">Call of Duty 4<span class="new badge">Borrar</span></a>
       	</div>
 
-      	<!-- <a class="waves-effect waves-light btn" id="checkOut" href="#confirmar">Confirmar</a> -->
-      	<a href="#!" id="checkOut" class=" waves-effect waves-light btn modal-action modal-close waves-effect waves-green btn-flat">Confirmar</a>
+      	<a href="#!" id="checkOut" class="waves-effect waves-light btn modal-close">
+      		Confirmar
+      	</a>
 
 	</div>
 	<div class="modal-footer">
-	  	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+	  	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">
+	  		Cerrar
+	  	</a>
 	</div>
 </div>
+
 <script type="text/javascript" src="./jquery/jquery.js"></script>
 <script type="text/javascript">
 	$("#checkOut").click(function(){

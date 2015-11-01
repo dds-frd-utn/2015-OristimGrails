@@ -4,9 +4,9 @@ class Juego {
 
 	String alias
 	String categoria
-	String descripcion
-	String imgroute = "img/imgDfl.jpg"
-	String informacion
+	String descripcion 	= "Descripcion no cargada."
+	String imgroute 	= "img/imgDfl.jpg"
+	String informacion 	= "Informacion no cargada."
 	String nombre
 	String plataforma
 	Double precio

@@ -37,6 +37,8 @@ class LoginController {
     def isSessionActive(){
         def mySession = request.session
         def smgr = new SessionManager(mySession)
+
+        // Retorna true o false como String
         render smgr.isActive()
     }
 
