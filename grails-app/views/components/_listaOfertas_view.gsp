@@ -18,18 +18,18 @@
 
 %{-- Ruta de imagenes para juegos. De la forma: "img/juego1.jpg" --}%
 <% def juegosList= Juego.getAll()%>
-<g:each in="${juegosList}">
+<g:each var="juego" in="${juegosList}">
     <div class="col s12 m7" >  
 	    <div class="card medium">
 		    <div class="card-image waves-effect waves-block waves-light">
-		    	<img class="activator" src="${it.imgroute}">
+		    	<img class="activator" src="${juego.imgroute}">
 		    </div>
 		   	<div class="price">
-		   		<p>Valor: $${it.precio}</p>
+		   		<p>Valor: $${juego.precio}</p>
 		   	</div>
 		    <div class="card-content">
 		      	<span class="card-title activator grey-text text-darken-4">
-		      		${it.nombre}
+		      		${juego.nombre}
 		      		<i class="material-icons right">more_vert</i>
 		      	</span>
 		      	<p><a href="#">Mas informacion</a></p>
@@ -39,11 +39,8 @@
 		      		Informacion:
 		      		<i class="material-icons right">close</i>
 		      	</span>
-		      	<p>${it.informacion}</p>	      		
-		      	%{-- <a id="${it.id}" class="btnAddGme btn-floating btn-large waves-effect waves-light red">
-		      		ADD
-		      	</a> --}%
-		      	<a href="#!" id="${it.id}" class="btnAddGme waves-effect waves-light btn">
+		      	<p>${juego.informacion}</p>	      		
+		      	<a href="#!" id="${juego.id}" class="btnAddGme waves-effect waves-light btn">
 		      		Comprar
 		      	</a>
 		    </div>
