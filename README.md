@@ -106,7 +106,7 @@ ejecutas esa URL en el navegador.
 
 Configura correctamente las variables de entono PATH, GRAILS_HOME y JAVA_HOME mencionadas anteriormente.
 
-Descargate este archivo .BAT https://drive.google.com/open?id=0B3N4QK1nj086ZEZqWC1veHl2MG8
+Descargate este archivo .BAT https://drive.google.com/open?id=0B3N4QK1nj086bWRxR3RRVmFvNW8
 
 ejecutalo.
 
