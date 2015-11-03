@@ -102,7 +102,7 @@ Luego la consola muestra: "Server running. Browse to http://localhost:8080/Proye
 
 ejecutas esa URL en el navegador.
 
-<h4>Crear rapidamente un proyecto (windows):<h4>
+<h4>Crear rapidamente un proyecto (windows):</h4>
 
 Configura correctamente las variables de entono PATH, GRAILS_HOME y JAVA_HOME mencionadas anteriormente.
 
