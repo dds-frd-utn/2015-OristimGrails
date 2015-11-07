@@ -102,6 +102,21 @@ Luego la consola muestra: "Server running. Browse to http://localhost:8080/Proye
 
 ejecutas esa URL en el navegador.
 
+<h4>Crear rapidamente un proyecto (windows):</h4>
+
+Configura correctamente las variables de entono PATH, GRAILS_HOME y JAVA_HOME mencionadas anteriormente.
+
+Descargate este archivo .BAT https://drive.google.com/open?id=0B3N4QK1nj086bWRxR3RRVmFvNW8
+
+ejecutalo.
+
+Luego que el proyecto haya sido creado, anda a la carpeta ".procesos_bat".
+
+Si todo funciona bien, vas a ahorrarte el hecho de tirar comandos por consola.
+
+Para correr el proyecto ejecutar el archivo "RunApp.bat" en la carpeta raiz de tu directorio.
+
+(Aclaracion: Solo va a funcionar si tenes correctamente seteadas las variables de entorno).
 
 # Config DB orm:
 
