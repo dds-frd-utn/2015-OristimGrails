@@ -18,6 +18,7 @@ class LoginController {
         if(user){
             def smgr = new SessionManager(request.session)
             smgr.crearSesion(user) 
+            smgr.nuevoCarrito()
             render("Success")   
         }
         else{

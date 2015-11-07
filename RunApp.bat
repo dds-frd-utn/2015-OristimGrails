@@ -1,3 +1,5 @@
 @echo off
-grails RunApp
+call grails RunApp
+echo PROCESO FINALIZADO
+cmd
 exit

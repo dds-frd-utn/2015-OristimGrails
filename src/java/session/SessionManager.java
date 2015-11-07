@@ -2,6 +2,7 @@ package session;
 
 import javax.servlet.http.HttpSession;
 import oristim.Usuario;
+import oristim.Carrito;
 
 //Session Manager se encarga de la administracion de la sesion del usuario en el sistema.
 public class SessionManager {
@@ -9,24 +10,17 @@ public class SessionManager {
 //	Atributos.
 		public HttpSession session;
 		public String sesId;
+		public String sesCart;
 //	Fin Atributos.
 	
 //	Crea un manejador de sesion pasando como parametro la HTTP Sesion del Servlet.
 	public SessionManager(HttpSession s){
 		session = s;
 		sesId = "USER_S1";
+		sesCart = "CART_S1";
 		this.setDefaultTimeOut();
-		// this.defaultUser();
 	}
 	
-// 	Crear una sesion Usuario por default
-	public void defaultUser(){
-		Usuario usr = new Usuario();
-		usr.setUsername("prueba");
-		usr.setNombre("prueba");
-		this.session.setAttribute(sesId, usr);
-	}
-
 //	Setea un nuevo Timeout de la sesion.
 	public void setNewTimeOut(Integer i){
 		session.setMaxInactiveInterval(i);
@@ -64,8 +58,10 @@ public class SessionManager {
 //	Elimina la sesion previamente creada.
 	public void eliminarSesion(){
 		
-		if( getSessionAttribute() != null )
+		if( getSessionAttribute() != null ){
 			this.session.setAttribute(sesId, null);
+			this.eliminarCarrito();
+		}
 		
 	}
 	
@@ -78,5 +74,25 @@ public class SessionManager {
 			return true;
 		
 	}
+
+	// Crea un nuevo carrito en sesion.
+	public void nuevoCarrito(){		
+		Carrito cart = new Carrito();
+
+		cart.setUsuario( this.getCurrentUsr() );
+		// Si hay un carrito actual, lo elimina.
+		this.eliminarCarrito();
+		this.session.setAttribute(sesCart, cart);
+
+	}
+
+	// elimina el carrito de sesion.
+	public void eliminarCarrito(){
+		this.session.setAttribute(sesCart, null);
+	}
 	
+	// Retorna el carrito actual.
+	public Carrito getCurrentCart(){
+		return (Carrito) this.session.getAttribute(sesCart);
+	}
 }
