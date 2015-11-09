@@ -18,32 +18,23 @@
 <!-- INICIO PAGINA -->
 <body>
 
-	<!-- Barra de Navegacion de la pagina -->
+    <!-- Barra de Navegacion de la pagina -->
     <g:render template="components/menuNavBar_view"/>
  
- 	<!-- Slider con imagenes de Juegos --> 
+    <!-- Slider con imagenes de Juegos --> 
     <g:render template="components/gameSlider_view"/>
          
- 	<div id= "show-frame" class="show-frame">
-	  	<h4>Ofertas</h4>
-	</div>	
+    <div id= "show-frame" class="show-frame">
+            <h4>Ofertas</h4>
+    </div>	
 
-	%{-- Ver controladores. Esto se borra luego --}%
-	<div id="controller-list" role="navigation">
-		<h5>Available Controllers (borrar luego):</h5>
-		<ul>
-			<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-				<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-			</g:each>
-		</ul>
-	</div>
+    <div class="section white">
+        <div class="row container">				 
+            <!-- Mostrar Ofertas de Juegos -->
+            <g:render template="components/listaOfertas_view"/>
+        </div>
+    </div>
 
-  	<div class="section white">
-	    <div class="row container">				 
-			    <!-- Mostrar Ofertas de Juegos -->
-            	<g:render template="components/listaOfertas_view"/>
-	    </div>
-  	</div>  		  
 </body>
 
 <!-- Footer de la pagina -->

@@ -34,15 +34,21 @@
   <div class="footer-copyright">
     <div class="container">
     © 2015 Copyright Oristim. Prohibido el copypasteo.
-    <a class="grey-text text-lighten-4 right" href="#!">Mas informacion</a>
+    <a class="modal-trigger right" href="#masinformacion">Mas informacion</a>
     </div>
   </div>
 
   <!--Cargar integrantes del proyecto-->
   <g:render template="components/integrantes_view"/>
-
+  <g:render template="components/masinformacion_view"/>
+  
 </footer>
 <!--<script type="text/javascript">
   /*Cargar Integrantes*/
   $("#modalIntegrantes").load("./components/integrantes_view.html"); 
+</script>-->
+
+<!--<script type="text/javascript">
+  /*Cargar Mas Informacion*/
+  $("#modalMasInformacion").load("./components/masinformacion_view.html"); 
 </script>-->

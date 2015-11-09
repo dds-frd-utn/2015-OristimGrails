@@ -43,7 +43,7 @@
 
 <!-- Dropdown Genero -->
 <ul id="genero" class="dropdown-content">
-  	<li><a id = "generoDisparo"  href="#!">FPS</a></li>
+  	<li><a id = "generoFPS"  href="#!">FPS</a></li>
   	<li><a id = "generoRol" 	 href="#!">Rol</a></li>
   	<li><a id = "generoEstrategia" href="#!">Estrategia</a></li>
   	<li class="divider"></li>
@@ -70,7 +70,7 @@
 	});
 
 	$("#consolasPlayStation").click(function(){
-		$("#show-frame").html("<h4>Consola: Play station 3</h4>");
+		$("#show-frame").html("<h4>Consola: PlayStation</h4>");
 		$("#mostrarJuegos").load("./components/consolasPlayStation_view.html");
 	});
 
@@ -79,11 +79,21 @@
 		$("#mostrarJuegos").load("./components/listaOfertas_view.html");
 	});
 
-	$("#generoDisparo").click(function(){
-		$("#show-frame").html("<h4>Genero: Disparo</h4>");
-		$("#mostrarJuegos").load("./components/generoDisparo_view.html");
+	$("#generoFPS").click(function(){
+		$("#show-frame").html("<h4>Genero: FPS</h4>");
+		$("#mostrarJuegos").load("./components/generoFPS_view.html");
+	});
+        
+        $("#generoRol").click(function(){
+		$("#show-frame").html("<h4>Genero: Rol</h4>");
+		$("#mostrarJuegos").load("./components/generoRol_view.html");
 	});
 
+        $("#generoEstrategia").click(function(){
+		$("#show-frame").html("<h4>Genero: Estrategia</h4>");
+		$("#mostrarJuegos").load("./components/generoEstrategia_view.html");
+	});
+        
 </script>
 
 
