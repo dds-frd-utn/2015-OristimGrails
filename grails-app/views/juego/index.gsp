@@ -35,6 +35,8 @@
 						<g:sortableColumn property="informacion" title="${message(code: 'juego.informacion.label', default: 'Informacion')}" />
 					
 						<g:sortableColumn property="nombre" title="${message(code: 'juego.nombre.label', default: 'Nombre')}" />
+                                                
+                                                <g:sortableColumn property="plataforma" title="${message(code: 'juego.plataforma.label', default: 'Plataforma')}" />
 					
 					</tr>
 				</thead>
