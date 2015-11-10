@@ -22,7 +22,8 @@
 		<li><a id="logoutUser" href="#!">Cerrar Sesion</a></li>
   	<%
   	}else{%>
-  		<li><a id="loginLink" class="modal-trigger" href="#login">Iniciar Sesion</a></li>  		
+                <li><a id="loginLink" class="modal-trigger" href="#login">Iniciar Sesion</a></li>
+                <li><a id="createUserLink" class="modal-trigger" href="./usuario/create">Crear Usuario</a></li>  		
   	<%}%>
 </ul>
 
@@ -30,7 +31,7 @@
 <script type="text/javascript">	
 	$( "#logoutUser" ).click(function() {
 		// Ejecuta el controlador LoginController metodo logout()
-        $.post( "login/logout" );
-        window.location.reload();	          
+                $.post( "login/logout" );
+                window.location.reload();	          
   	});
 </script>
