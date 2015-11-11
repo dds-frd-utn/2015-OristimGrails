@@ -36,14 +36,10 @@ class UsuarioController {
         }
 
         usuarioInstance.save flush:true
+        
+        //Una vez que lo guarda volvemos a la pagina principal
+        redirect(uri: "")
 
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'usuario.label', default: 'Usuario'), usuarioInstance.id])
-                redirect usuarioInstance
-            }
-            '*' { respond usuarioInstance, [status: CREATED] }
-        }
     }
 
     def edit(Usuario usuarioInstance) {

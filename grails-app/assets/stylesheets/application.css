@@ -11,3 +11,15 @@
 *= require mobile
 *= require_self
 */
+
+#grailsLogo {
+    background-color: #817C7B;
+}
+
+.footer {
+    background: #817C7B none repeat scroll 0% 0%;
+}
+
+html{
+background-image: -moz-linear-gradient(center top , rgb(60, 53, 53), rgb(221, 221, 221));
+}
