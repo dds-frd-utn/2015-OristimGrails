@@ -3,7 +3,8 @@ package oristim
 class Carrito {
 
 	public Usuario usuario
-    public String estado
+        public String estado
+        public List juegos = []
 	public static hasMany = [juegos: Juego]
 	//static hasOne = [usuario:Usuario]
         
@@ -30,5 +31,10 @@ class Carrito {
 	String getEstado(){
 		return this.estado
 	}
-
+        
+        def addJuego(Juego unJuego){
+            this.juegos.push(unJuego)
+        }
+        
+ 
 }
