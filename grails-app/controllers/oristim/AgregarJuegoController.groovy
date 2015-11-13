@@ -6,8 +6,9 @@ import javax.servlet.http.HttpSession
 class AgregarJuegoController {
 
     def index() { 
-    
-        def juego = Juego.findById(//va un parametro)
+    	
+    	// Pasar parametro id de un juego
+        def juego = Juego.findById(10)
         def smgr = new SessionManager(request.session)
         def c = smgr.getCurrentCart()
         c.addJuego(juego)
