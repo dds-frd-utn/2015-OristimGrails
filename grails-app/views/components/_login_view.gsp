@@ -22,7 +22,7 @@
                     <a id="loginUser" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Login</a>
             </div>
 </div>
-<script type="text/javascript" src="./jquery/jquery.js"></script>
+<script type="text/javascript" src="/Oristim/jquery/jquery.js"></script>
 <script type="text/javascript">
 
     // Lanzamos ajax de login. Pasamos al controlador login los campos de los formularios.

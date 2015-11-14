@@ -17,12 +17,12 @@
 </style>
 
 %{-- Ruta de imagenes para juegos. De la forma: "img/juego1.jpg" --}%
-<% def juegosList= Juego.getAll()%>
+%{-- <% def juegosList= Juego.getAll()%> --}%
 <g:each var="juego" in="${juegosList}">
     <div class="col s12 m7" >  
 	    <div class="card medium">
 		    <div class="card-image waves-effect waves-block waves-light">
-		    	<img class="activator" src="${juego.imgroute}">
+		    	<img class="activator" src="/Oristim/${juego.imgroute}">
 		    </div>
 		   	<div class="price">
 		   		<p>Valor: $${juego.precio}</p>
@@ -48,7 +48,7 @@
 	</div>
 </g:each>
 
-<script type="text/javascript" src="./jquery/jquery.js"></script>
+<script type="text/javascript" src="/Oristim/jquery/jquery.js"></script>
 <script type="text/javascript">
 	// Cuando se hace click en algun boton de la clase btnAddGame...
 	$(".btnAddGme").click(function(){

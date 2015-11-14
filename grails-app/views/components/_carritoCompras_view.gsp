@@ -21,7 +21,7 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="./jquery/jquery.js"></script>
+<script type="text/javascript" src="/Oristim/jquery/jquery.js"></script>
 <script type="text/javascript">
 	$("#checkOut").click(function(){
 		Materialize.toast('Checkout realizado !', 7000 , null)

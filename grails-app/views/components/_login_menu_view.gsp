@@ -23,11 +23,11 @@
   	<%
   	}else{%>
                 <li><a id="loginLink" class="modal-trigger" href="#login">Iniciar Sesion</a></li>
-                <li><a id="createUserLink" class="modal-trigger" href="./usuario/create">Crear Usuario</a></li>  		
+                <li><a id="createUserLink" class="modal-trigger" href="/Oristim/usuario/create">Crear Usuario</a></li>  		
   	<%}%>
 </ul>
 
-<script type="text/javascript" src="./jquery/jquery.js"></script>
+<script type="text/javascript" src="/Oristim/jquery/jquery.js"></script>
 <script type="text/javascript">	
 	$( "#logoutUser" ).click(function() {
 		// Ejecuta el controlador LoginController metodo logout()
