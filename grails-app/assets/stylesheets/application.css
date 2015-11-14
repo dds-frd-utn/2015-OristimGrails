@@ -13,11 +13,11 @@
 */
 
 #grailsLogo {
-    background-color: rgba(0, 0, 0, 0.87);;
+    background-color: #313131;
 }
 
 .footer {
-    background: rgba(0, 0, 0, 0.87) none repeat scroll 0% 0%;
+    background: #313131 none repeat scroll 0% 0%;
 }
 
 html{
