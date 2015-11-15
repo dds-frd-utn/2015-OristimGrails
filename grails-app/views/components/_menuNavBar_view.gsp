@@ -59,40 +59,40 @@
 <script type="text/javascript">	
 	/*Cargar Dinamicamente Links*/
         
-	$("#consolasWindows").click(function(){
-		$("#show-frame").html("<h4>Consola: Windows</h4>");
-		$("#mostrarJuegos").load(".//components/consolasWindows_view.html");
-	});
+	// $("#consolasWindows").click(function(){
+	// 	$("#show-frame").html("<h4>Consola: Windows</h4>");
+	// 	$("#mostrarJuegos").load(".//components/consolasWindows_view.html");
+	// });
 
-	$("#consolasXbox").click(function(){
-		$("#show-frame").html("<h4>Consola: Xbox</h4>");
-		$("#mostrarJuegos").load(".//components/consolasXbox_view.html");
-	});
+	// $("#consolasXbox").click(function(){
+	// 	$("#show-frame").html("<h4>Consola: Xbox</h4>");
+	// 	$("#mostrarJuegos").load(".//components/consolasXbox_view.html");
+	// });
 
-	$("#consolasPlayStation").click(function(){
-		$("#show-frame").html("<h4>Consola: PlayStation</h4>");
-		$("#mostrarJuegos").load(".//components/consolasPlayStation_view.html");
-	});
+	// $("#consolasPlayStation").click(function(){
+	// 	$("#show-frame").html("<h4>Consola: PlayStation</h4>");
+	// 	$("#mostrarJuegos").load(".//components/consolasPlayStation_view.html");
+	// });
 
-	$("#ofertas").click(function(){
-		$("#show-frame").html("<h4>Ofertas</h4>");
-		$("#mostrarJuegos").load(".//components/listaOfertas_view.html");
-	});
+	// $("#ofertas").click(function(){
+	// 	$("#show-frame").html("<h4>Ofertas</h4>");
+	// 	$("#mostrarJuegos").load(".//components/listaOfertas_view.html");
+	// });
 
-	$("#generoFPS").click(function(){
-		$("#show-frame").html("<h4>Genero: FPS</h4>");
-		$("#mostrarJuegos").load(".//components/generoFPS_view.html");
-	});
+	// $("#generoFPS").click(function(){
+	// 	$("#show-frame").html("<h4>Genero: FPS</h4>");
+	// 	$("#mostrarJuegos").load(".//components/generoFPS_view.html");
+	// });
         
-        $("#generoRol").click(function(){
-		$("#show-frame").html("<h4>Genero: Rol</h4>");
-		$("#mostrarJuegos").load(".//components/generoRol_view.html");
-	});
+ //        $("#generoRol").click(function(){
+	// 	$("#show-frame").html("<h4>Genero: Rol</h4>");
+	// 	$("#mostrarJuegos").load(".//components/generoRol_view.html");
+	// });
 
-        $("#generoEstrategia").click(function(){
-		$("#show-frame").html("<h4>Genero: Estrategia</h4>");
-		$("#mostrarJuegos").load(".//components/generoEstrategia_view.html");
-	});
+ //        $("#generoEstrategia").click(function(){
+	// 	$("#show-frame").html("<h4>Genero: Estrategia</h4>");
+	// 	$("#mostrarJuegos").load(".//components/generoEstrategia_view.html");
+	// });
         
 </script>
 

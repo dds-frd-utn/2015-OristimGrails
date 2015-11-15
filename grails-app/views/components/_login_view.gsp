@@ -28,7 +28,7 @@
     // Lanzamos ajax de login. Pasamos al controlador login los campos de los formularios.
 	$( "#loginUser" ).click(function() {
         // Mandamos datos por post
-        $.post("login",{
+        $.post("/Oristim/login",{
                 username: $( "#username" ).val(),
                 password: $( "#password" ).val()
             }).done(function( resp ) {

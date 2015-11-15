@@ -18,6 +18,8 @@ class UrlMappings {
 		
         // "/"(controller:"FilterJuego", view:"/index")
         "/"(controller:"FilterJuego")
+
         "500"(view:'/error')
+        
 	}
 }

@@ -31,7 +31,7 @@
 <script type="text/javascript">	
 	$( "#logoutUser" ).click(function() {
 		// Ejecuta el controlador LoginController metodo logout()
-                $.post( "login/logout" );
+                $.post( "/Oristim/login/logout" );
                 window.location.reload();	          
   	});
 </script>

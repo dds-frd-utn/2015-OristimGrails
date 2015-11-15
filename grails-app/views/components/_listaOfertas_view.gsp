@@ -56,7 +56,7 @@
 		// Capturamos el id del boton (Representa id de un juego).
 		var gameId = parseInt( $(this).attr('id') );
 
-		$.post("login/isSessionActive").done(function( resp ) {
+		$.post("/Oristim/login/isSessionActive").done(function( resp ) {
 
             if( resp == 'false' ){
         		$("#loginLink").click();
