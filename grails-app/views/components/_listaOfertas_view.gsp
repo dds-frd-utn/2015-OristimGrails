@@ -60,14 +60,19 @@
 
             if( resp == 'false' ){
         		$("#loginLink").click();
+        		
             }
-            else{
-            	/*Codificar aca lo que sucede cuando el usuario esta logeado y quiere agregar
-            	algo al carrito*/
-            	// Muestra un toast con un mensaje.
-            	// Materialize.toast('Agregado al carrito. (Id = '+gameId+' )', 3000 , 'rounded');
-            	Materialize.toast('Agregado al carrito. (Id = '+gameId+' )', 3000);
-            }    
+            
+            // Ejecutamos ajax para agregar carrito.
+   			$.ajax( "/Oristim/agregar/"+gameId )
+   			.done(function(){
+				Materialize.toast('Agregado al carrito (Ver Consola) Id:'+gameId, 3000);
+			})
+			.fail(function(){
+				Materialize.toast('Error al agregar juego', 4000 , 'errorMsg');
+			});
+
+               
         });
 	});
 </script>

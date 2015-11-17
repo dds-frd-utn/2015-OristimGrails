@@ -19,6 +19,11 @@ class UrlMappings {
         // "/"(controller:"FilterJuego", view:"/index")
         "/"(controller:"FilterJuego")
 
+        // Agregar juego, pasando parametro un ID
+        "/agregar/$idJuego"(controller:"AgregarJuego", action:"index")
+
+        "/carrito"(controller:"AgregarJuego", action:"getCarritoJuegos")
+
         "500"(view:'/error')
         
 	}

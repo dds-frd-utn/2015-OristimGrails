@@ -22,7 +22,7 @@
 	    <ul class="right hide-on-med-and-down">
 	      <!-- Activar Dropdown de Carrito de Compras -->
 	      	<li>
-	      		  <a class="modal-trigger" href="#carritoCompras"><i class="large material-icons">shopping_cart</i></a>
+	      		  <a id="carrito" class="modal-trigger" href="#carritoCompras"><i class="large material-icons">shopping_cart</i></a>
 	      	</li>
 	      <!-- Activar Dropdown de Login (Cargado mediante Vista)-->
 			<g:render template="/components/login_menu_view"/>

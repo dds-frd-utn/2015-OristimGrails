@@ -3,10 +3,10 @@
 	<div class="modal-content">
 	  <h4>Carrito de Compras</h4>
 	  
-	    <div class="collection">
-        	<a href="#!" class="collection-item">World Of Warcraft<span class="new badge">Borrar</span></a>
-        	<a href="#!" class="collection-item">Company of Heroes<span class="new badge">Borrar</span></a>
-        	<a href="#!" class="collection-item">Call of Duty 4<span class="new badge">Borrar</span></a>
+	    <div id="carrito-lst" class="collection">
+		    %{-- <g:each var="juego" in="${juegosCarrito}"> --}%
+	        	<a href="#!" class="collection-item"><span class="new badge">Borrar</span></a>
+	        %{-- </g:each> --}%
       	</div>
 
       	<a href="#!" id="checkOut" class="waves-effect waves-light btn modal-close">
@@ -25,5 +25,12 @@
 <script type="text/javascript">
 	$("#checkOut").click(function(){
 		Materialize.toast('Checkout realizado !', 7000 , null)
+	});
+
+	$("#carrito").click(function(){
+		$.ajax( "/Oristim/carrito").done(function(resp){
+			console.log(resp);
+			// $("#carrito-lst").load(resp);
+		});
 	});
 </script>
