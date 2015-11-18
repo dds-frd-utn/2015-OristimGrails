@@ -66,7 +66,13 @@
             // Ejecutamos ajax para agregar carrito.
    			$.ajax( "/Oristim/agregar/"+gameId )
    			.done(function(){
-				Materialize.toast('Agregado al carrito (Ver Consola) Id:'+gameId, 3000);
+   				var time = 1000;
+				Materialize.toast('Agregado al carrito (Ver Consola) Id:'+gameId, time);
+				setTimeout(
+  					function(){
+    					window.location.reload();  
+  				},time);
+				
 			})
 			.fail(function(){
 				Materialize.toast('Error al agregar juego', 4000 , 'errorMsg');
