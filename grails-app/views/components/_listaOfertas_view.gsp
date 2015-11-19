@@ -66,7 +66,7 @@
             // Ejecutamos ajax para agregar carrito.
    			$.ajax( "/Oristim/agregar/"+gameId )
    			.done(function(){
-   				var time = 1000;
+   				var time = 300;
 				Materialize.toast('Agregado al carrito (Ver Consola) Id:'+gameId, time);
 				setTimeout(
   					function(){

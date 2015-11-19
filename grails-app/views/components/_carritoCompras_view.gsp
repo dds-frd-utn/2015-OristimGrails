@@ -12,7 +12,7 @@
 	    			def juegosCarrito = c.juegos	
 		    %>
 		   	    <g:each var="juego" in="${juegosCarrito}">
-			      	<a href="#!" class="collection-item">${juego.nombre}<span class="new badge">Borrar</span></a>
+			      	<a href="#!" id="${juego.id}" class="collection-item">${juego.nombre}<span id="${juego.id}" class="delete-elem new badge">Borrar</span></a>
 		        </g:each>
 	        <%}catch(Exception e){
 	    		println("No hay juegos")			
@@ -34,5 +34,17 @@
 <script type="text/javascript">
 	$("#checkOut").click(function(){
 		Materialize.toast('Checkout realizado !', 7000 , null)
+	});
+
+	$(".delete-elem").click(function(){
+		
+		var gameId = parseInt( $(this).attr('id') );
+
+		$("#"+gameId).hide(300);
+		var time = 1000;
+		$.ajax( "/Oristim/borrar/"+gameId ).done(function( resp ){	
+			Materialize.toast('Juego eliminado', time);
+		});
+			
 	});
 </script>

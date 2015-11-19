@@ -24,6 +24,10 @@ class UrlMappings {
 
         "/carrito"(controller:"AgregarJuego", action:"getCarritoJuegos")
 
+        "/borrar/$id"(controller:"AgregarJuego", action:"eliminarElemento")
+
+        "/guardar"(controller:"AgregarJuego", action:"guardarCarrito")
+
         "500"(view:'/error')
         
 	}

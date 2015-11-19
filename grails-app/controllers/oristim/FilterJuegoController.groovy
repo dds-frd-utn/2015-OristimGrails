@@ -20,7 +20,10 @@ class FilterJuegoController{
             plataforma == p
         }
 
-        render(view:"/index", model:[juegosList:juegosList])
+        render(view:"/index", model:[
+            juegosList:juegosList,
+            plataforma:p
+        ])
     }
 
     def byCategoria(String c){
@@ -30,8 +33,11 @@ class FilterJuegoController{
         }
 
         println (juegosList)
-
-        render(view:"/index", model:[juegosList:juegosList])
+        
+        render(view:"/index", model:[
+            juegosList:juegosList,
+            plataforma:c
+        ])
     }
 
 }

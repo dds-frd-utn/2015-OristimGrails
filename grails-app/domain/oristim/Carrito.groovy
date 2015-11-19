@@ -3,7 +3,7 @@ package oristim
 class Carrito {
 
 	public Usuario usuario
-        public String estado
+        public String estado = 'p'
         public List juegos = []
 	public static hasMany = [juegos: Juego]
 	//static hasOne = [usuario:Usuario]

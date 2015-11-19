@@ -46,4 +46,33 @@ class AgregarJuegoController {
        // [juegosCarrito:c.juegos]
          
     }
+
+    // Basicamente, tipo.. o sea.. suponete, ponele.... borramos un juego
+    def eliminarElemento(Integer id){
+       def smgr = new SessionManager(request.session) 
+       def c = smgr.getCurrentCart()
+
+       c.juegos.removeAll{ juego->
+            juego.id == id
+       }
+
+       println c.juegos
+
+       render "success"
+    }
+
+    def guardarCarrito(){
+        
+        def smgr = new SessionManager(request.session) 
+        def c = smgr.getCurrentCart()
+        
+        println("carrito para guardar")
+        println(c)
+        c.save(flush: true , failOnError: true)
+
+        render "hola"
+        
+        
+    }
+
 }
