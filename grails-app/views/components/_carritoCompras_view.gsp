@@ -30,7 +30,7 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="/Oristim/jquery/jquery.js"></script>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
 <script type="text/javascript">
 	$("#checkOut").click(function(){
 		Materialize.toast('Checkout realizado !', 7000 , null)
@@ -42,7 +42,7 @@
 
 		$("#"+gameId).hide(300);
 		var time = 1000;
-		$.ajax( "/Oristim/borrar/"+gameId ).done(function( resp ){	
+		$.ajax( "/borrar/"+gameId ).done(function( resp ){	
 			Materialize.toast('Juego eliminado', time);
 		});
 			

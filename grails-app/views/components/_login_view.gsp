@@ -22,13 +22,13 @@
                     <a id="loginUser" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Login</a>
             </div>
 </div>
-<script type="text/javascript" src="/Oristim/jquery/jquery.js"></script>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
 <script type="text/javascript">
 
     // Lanzamos ajax de login. Pasamos al controlador login los campos de los formularios.
 	$( "#loginUser" ).click(function() {
         // Mandamos datos por post
-        $.post("/Oristim/login",{
+        $.post("/login",{
                 username: $( "#username" ).val(),
                 password: $( "#password" ).val()
             }).done(function( resp ) {

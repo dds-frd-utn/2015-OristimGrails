@@ -14,7 +14,7 @@
 <div id="fede" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Fede Sanches</h4> 
-      <img src="/Oristim/img/integrantes/fede.jpg"> 
+      <img src="/img/integrantes/fede.jpg"> 
       <p>Analista de sistemas, documentacion y diagramas.</p>
   </div>
   <div class="modal-footer">
@@ -38,7 +38,7 @@
 <div id="diego" class="modal modal-fixed-footer">
   <div class="modal-content">
     <h4>Diego Colussi</h4>
-    <img src="/Oristim/img/integrantes/diego.jpg">
+    <img src="/img/integrantes/diego.jpg">
       <p>Diseñador de interfaces.</p>
   </div>
   <div class="modal-footer">

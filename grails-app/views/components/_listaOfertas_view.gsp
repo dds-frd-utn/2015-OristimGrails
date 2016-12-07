@@ -22,7 +22,7 @@
     <div class="col s12 m7" >  
 	    <div class="card medium">
 		    <div class="card-image waves-effect waves-block waves-light">
-		    	<img class="activator" src="/Oristim/${juego.imgroute}">
+		    	<img class="activator" src="/${juego.imgroute}">
 		    </div>
 		   	<div class="price">
 		   		<p>Valor: $${juego.precio}</p>
@@ -48,7 +48,7 @@
 	</div>
 </g:each>
 
-<script type="text/javascript" src="/Oristim/jquery/jquery.js"></script>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
 <script type="text/javascript">
 	// Cuando se hace click en algun boton de la clase btnAddGame...
 	$(".btnAddGme").click(function(){
@@ -56,7 +56,7 @@
 		// Capturamos el id del boton (Representa id de un juego).
 		var gameId = parseInt( $(this).attr('id') );
 
-		$.post("/Oristim/login/isSessionActive").done(function( resp ) {
+		$.post("/login/isSessionActive").done(function( resp ) {
 
             if( resp == 'false' ){
         		$("#loginLink").click();
@@ -64,7 +64,7 @@
             }
             
             // Ejecutamos ajax para agregar carrito.
-   			$.ajax( "/Oristim/agregar/"+gameId )
+   			$.ajax( "/agregar/"+gameId )
    			.done(function(){
    				var time = 300;
 				Materialize.toast('Agregado al carrito (Ver Consola) Id:'+gameId, time);

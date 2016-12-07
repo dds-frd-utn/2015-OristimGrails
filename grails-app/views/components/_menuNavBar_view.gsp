@@ -5,7 +5,7 @@
 	  <div class="nav-wrapper">
 	    
 	    <ul class="left hide-on-med-and-down">
-	    	<li><a href="/Oristim/" class=""><img src="/Oristim/img/oristim.png" width="110"></a> </li>
+	    	<li><a href="/" class=""><img src="/img/oristim.png" width="110"></a> </li>
 	    </ul>
 	  
 	    <ul class="left hide-on-med-and-down">
@@ -34,20 +34,20 @@
 
 <!-- Dropdown Consolas -->
 <ul id="consolas" class="dropdown-content">
-  	<li><a id="consolasWindows" href="/Oristim/plataforma/windows">Windows</a></li>
-  	<li><a id="consolasXbox" href="/Oristim/plataforma/xbox">Xbox</a></li>
-  	<li><a id="consolasPlayStation" href="/Oristim/plataforma/ps2">PlayStation</a></li>
+  	<li><a id="consolasWindows" href="/plataforma/windows">Windows</a></li>
+  	<li><a id="consolasXbox" href="/plataforma/xbox">Xbox</a></li>
+  	<li><a id="consolasPlayStation" href="/plataforma/ps2">PlayStation</a></li>
   	<li class="divider"></li>
-  	<li><a href="/Oristim/">Todas</a></li>
+  	<li><a href="/">Todas</a></li>
 </ul>  
 
 <!-- Dropdown Genero -->
 <ul id="genero" class="dropdown-content">
-  	<li><a id = "generoFPS" href="/Oristim/categoria/fps">FPS</a></li>
-  	<li><a id = "generoRol" href="/Oristim/categoria/rpg">Rol</a></li>
-  	<li><a id = "generoEstrategia" href="/Oristim/categoria/estrategia">Estrategia</a></li>
+  	<li><a id = "generoFPS" href="/categoria/fps">FPS</a></li>
+  	<li><a id = "generoRol" href="/categoria/rpg">Rol</a></li>
+  	<li><a id = "generoEstrategia" href="/categoria/estrategia">Estrategia</a></li>
   	<li class="divider"></li>
-  	<li><a href="/Oristim/">Todas</a></li>
+  	<li><a href="/">Todas</a></li>
 </ul>  
 
 <!-- Modal Carrito de Compras -->
@@ -55,7 +55,7 @@
 <!-- Modal de Login -->
 <g:render template="/components/login_view"/>
 
-<script type="text/javascript" src="/Oristim/jquery/jquery.js"></script>
+<script type="text/javascript" src="/jquery/jquery.js"></script>
 <script type="text/javascript">	
 	/*Cargar Dinamicamente Links*/
 </script>
