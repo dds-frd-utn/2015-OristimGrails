@@ -1,7 +1,7 @@
 # Oristim
 ![oristim](http://i.imgur.com/EYeMvFe.png?1)
 
-Proyecto de venta de videojuegos realizado por el Grupo 1 - Casas, Colussi, Moreira y Sanches.
+Proyecto de venta de videojuegos realizado por el Grupo 1
 
 Repositorio del proyecto con Grails Framework.
 
