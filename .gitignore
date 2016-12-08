@@ -17,12 +17,3 @@ stacktrace.log
 .project
 .classpath
 *.db
-100tifikoDB.h2.db
-100tifikoDB.h2.db
-100tifikoDB.lock.db
-100tifikoDB.trace.db
-100tifikoDB.h2.db
-100tifikoDB.trace.db
-100tifikoDB.h2.db
-target/classes/application.properties
-target/classes/BootStrap$_closure1.class
