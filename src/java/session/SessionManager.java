@@ -1,8 +1,7 @@
 package session;
 
 import javax.servlet.http.HttpSession;
-import oristim.Usuario;
-import oristim.Carrito;
+import oristim.*;
 
 //Session Manager se encarga de la administracion de la sesion del usuario en el sistema.
 public class SessionManager {

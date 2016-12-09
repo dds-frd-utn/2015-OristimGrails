@@ -12,7 +12,7 @@ class Juego {
 	Double precio
     
 	static mapping = {
-		version false
+		// version false
 	}
 
 	static constraints = {

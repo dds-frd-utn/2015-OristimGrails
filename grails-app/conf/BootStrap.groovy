@@ -12,7 +12,14 @@ class BootStrap {
 			,nombre: 'Matias'
 			,apellido: 'Rios'
 			,email: 'mrios1@gmail.com'
-    	).save()
+    	).save(flush:true)
+    	new Usuario(
+    		username: 'dcol'
+			,password: 'dcol1'
+			,nombre: 'Diego'
+			,apellido: 'Colussi'
+			,email: 'Hola'
+    	).save(flush:true)
     	new Juego(
     		alias: 'COD'
 			,categoria: 'FPS'

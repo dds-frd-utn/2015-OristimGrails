@@ -16,9 +16,17 @@ class LoginController {
 
         // Si el usuario existe, guardarlo en la sesion. Retornar el string Success
         if(user){
+            // Creamos el carrito en la sesion.
+            println("crear carrito")
+            println(user.carritoTemp)
+            if(user.carritoTemp == null){
+                user.carritoTemp = new CarritoTemp().save(flush:true)
+                user.save(flush:true)
+                println("El carrito fue creado")
+            }
             def smgr = new SessionManager(request.session)
             smgr.crearSesion(user) 
-            smgr.nuevoCarrito()
+            // smgr.nuevoCarrito()
             render("Success")   
         }
         else{

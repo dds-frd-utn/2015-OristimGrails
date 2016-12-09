@@ -7,14 +7,16 @@ class Usuario {
 	String nombre
 	String apellido
 	String email
+	CarritoTemp carritoTemp
 
 	static mapping = {
 		//username column: "username", sqlType: "varchar", length: 46
-		version false
+		// version false
 	}
 
 	static constraints = {
 		username nullable: false, maxSize: 45, unique: true
+		carritoTemp nullable: true
 		password nullable: false, maxSize: 45
 		nombre nullable: false, maxSize: 45
 		apellido nullable: false, maxSize: 45

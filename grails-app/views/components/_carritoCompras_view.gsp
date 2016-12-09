@@ -1,4 +1,5 @@
 <%@ page import="session.SessionManager" %>
+<%@ page import="oristim.*" %>
 <!-- Modal Structure de Carrito de Compras -->
 <div id="carritoCompras" class="modal modal-fixed-footer">
 	<div class="modal-content">
@@ -8,7 +9,8 @@
 	    	%{-- Logica Java --}%
 	    	<%try {
 	    			def smgr = new SessionManager(request.session)
-	    			def c = smgr.getCurrentCart()
+	    			def uid = smgr.getCurrentUsr().id
+	    			def c = Usuario.get(uid).carritoTemp
 	    			def juegosCarrito = c.juegos	
 		    %>
 		   	    <g:each var="juego" in="${juegosCarrito}">

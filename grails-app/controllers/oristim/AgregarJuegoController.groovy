@@ -2,30 +2,54 @@ package oristim
 import session.SessionManager
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpSession
+import org.hibernate.*
 
 class AgregarJuegoController {
 
     def index(Integer idJuego) { 
-    	
     	// Pasar parametro id de un juego
-        def juego = Juego.findById(idJuego)
+        def j = Juego.get(idJuego)
         println("el id seteado es"+idJuego)
-        println(juego.nombre);
-        try {
+        println(j.nombre);
+        // try {
+            
             def smgr = new SessionManager(request.session)
 
-            def c = smgr.getCurrentCart()
+            // def c = smgr.getCurrentCart()
 
-            c.addJuego(juego)
+            def u = smgr.getCurrentUsr()
+            // Traemos el usuario posta
+            def usuario = Usuario.get(u.id)
+            // traemos el carrito temporal.
+            def c2 = usuario.carritoTemp
 
-            // c.juegos.each{
-            //     println "Nombre: ${it.nombre}"
-            // }  
+            println(usuario.nombre)
+
+            println("Juego ${j}")
+            
+
+            println(j in c2.juegos)
+
+            if(!(j in c2.juegos)){
+                // Agregamos el juego al carrito
+                c2.juegos.push(j) 
+                
+                // Guardamos el carrito tempoal
+                c2.save(flush:true)
+                
+                // Guardamos el usuario.
+                usuario.save(flush:true)
+            }else{
+                // Para abortar ejecucion, dividimos por cero.
+                0/0
+            }
+
+
             render "success"
-        }
-        catch(Exception e){
+        // }
+        // catch(Exception e){
             println("Error. No se pudo agregar juego")
-        }
+        // }
         
     }
 
@@ -33,9 +57,11 @@ class AgregarJuegoController {
         
         def smgr = new SessionManager(request.session)
         
-        def c = smgr.getCurrentCart()
+        def u = smgr.getCurrentUsr()
+        def c = Usuario.get(u.id).carritoTemp
 
         println "Mostrar Carrito:"
+        println (c)
         // c.juegos.each{
         //     println "Nombre: ${it.nombre}"
         // } 
@@ -50,11 +76,14 @@ class AgregarJuegoController {
     // Basicamente, tipo.. o sea.. suponete, ponele.... borramos un juego
     def eliminarElemento(Integer id){
        def smgr = new SessionManager(request.session) 
-       def c = smgr.getCurrentCart()
+       def uid =  smgr.getCurrentUsr().id
+       def c = Usuario.get(uid).carritoTemp
 
        c.juegos.removeAll{ juego->
             juego.id == id
        }
+
+       c.save(flush:true)
 
        println c.juegos
 
