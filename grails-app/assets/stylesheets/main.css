@@ -6,6 +6,7 @@ input, select, textarea {
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
+	color: #000;
 }
 
 /* BASE LAYOUT */
@@ -40,6 +41,7 @@ body {
 	background: #ffffff;
 	color: #333333;
 	margin: 0 auto;
+	margin-top: 50px;
 	max-width: 960px;
 	overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
 	   -moz-box-shadow: 0 0 0.3em #255b17;
@@ -158,7 +160,7 @@ img {
 }
 
 .nav a {
-	color: #666666;
+	color: #000;
 	display: block;
 	padding: 0.25em 0.7em;
 	text-decoration: none;
@@ -168,7 +170,7 @@ img {
 }
 
 .nav a:active, .nav a:visited {
-	color: #666666;
+	color: #000;
 }
 
 .nav a:focus, .nav a:hover {
@@ -536,7 +538,7 @@ th:hover, tr:hover {
 .buttons a {
 	background-color: transparent;
 	border: 0;
-	color: #666666;
+	color: #000;
 	cursor: pointer;
 	display: inline-block;
 	margin: 0 0.25em 0;
@@ -587,7 +589,7 @@ th:hover, tr:hover {
 }
 
 .buttons .save {
-	background-image: url(../images/skin/database_save.png);
+	background-image: url(../images/skin/create-group-button.png);
 }
 
 a.skip {

@@ -1,9 +1,9 @@
-%{-- Modal Integrante: Emilano --}%
-<div id="emiliano" class="modal modal-fixed-footer">
+%{-- Modal Integrante: Guru --}%
+<div id="guru" class="modal modal-fixed-footer">
   <div class="modal-content">
-    <h4>Emiliano Casas</h4>
-    <p>(Falta foto)</p>
-      <p>Diseñador de bases de datos.</p>
+    <h4>Martin De Gesus</h4>
+      <img src="/img/integrantes/guru.jpg"> 
+      <p>Leecher.</p>
   </div>
   <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
@@ -13,21 +13,21 @@
 %{-- Modal Integrante: Fede --}%
 <div id="fede" class="modal modal-fixed-footer">
   <div class="modal-content">
-    <h4>Fede Sanches</h4> 
+    <h4>Federico Sanches</h4> 
       <img src="/img/integrantes/fede.jpg"> 
-      <p>Analista de sistemas, documentacion y diagramas.</p>
+      <p>Analista de sistemas, documentación y diagramas.</p>
   </div>
   <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
   </div>
 </div>
 
-%{-- Modal Integrante: Moreira --}%
-<div id="jhony" class="modal modal-fixed-footer">
+%{-- Modal Integrante: Martin --}%
+<div id="martin" class="modal modal-fixed-footer">
   <div class="modal-content">
-    <h4>Jhonatan Moreira</h4> 
-    <p>(Falta foto)</p>
-      <p>Desarrollador de la logica de aplicacion.</p>
+    <h4>Martin Galeano</h4> 
+      <img src="/img/integrantes/martin.jpg"> 
+      <p>Desarrollador Back-end.</p>
   </div>
   <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
@@ -39,7 +39,7 @@
   <div class="modal-content">
     <h4>Diego Colussi</h4>
     <img src="/img/integrantes/diego.jpg">
-      <p>Diseñador de interfaces.</p>
+      <p>Diseñador Front-end.</p>
   </div>
   <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>

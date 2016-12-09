@@ -4,7 +4,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'username', 'error')} required">
 	<label for="username">
-		<g:message code="usuario.username.label" default="Username" />
+		<g:message code="usuario.username.label" default="Nombre de Usuario" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="username" maxlength="45" required="" value="${usuarioInstance?.username}"/>
@@ -13,7 +13,7 @@
 
 <div class="fieldcontain ${hasErrors(bean: usuarioInstance, field: 'password', 'error')} required">
 	<label for="password">
-		<g:message code="usuario.password.label" default="Password" />
+		<g:message code="usuario.password.label" default="Contraseña" />
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="password" maxlength="45" required="" value="${usuarioInstance?.password}"/>

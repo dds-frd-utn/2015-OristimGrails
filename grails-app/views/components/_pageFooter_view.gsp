@@ -12,19 +12,19 @@
         <ul>
           <li>
             <!-- Descripcion Emiliano -->
-            <a class="modal-trigger" href="#emiliano">Emiliano</a>
+            <a class="modal-trigger" href="#guru">Martin De Gesus</a>
           </li>
           <li>
             <!-- Descripcion Emiliano -->
-            <a class="modal-trigger" href="#fede">Fede kpo</a>
+            <a class="modal-trigger" href="#fede">Federico Sanches</a>
           </li>
           <li>
             <!-- Descripcion Emiliano -->
-            <a class="modal-trigger" href="#jhony">Jhony</a>
+            <a class="modal-trigger" href="#martin">Martin Galeano</a>
           </li>
           <li>
             <!-- Descripcion Emiliano -->
-            <a class="modal-trigger" href="#diego">Diego</a>
+            <a class="modal-trigger" href="#diego">Diego Colussi</a>
           </li>
 
         </ul>
@@ -34,7 +34,7 @@
   <div class="footer-copyright">
     <div class="container">
     © 2015 Copyright Oristim. Prohibido el copypasteo.
-    <a class="modal-trigger right" href="#masinformacion">Mas informacion</a>
+    <a class="modal-trigger right" href="#masinformacion">Mas información</a>
     </div>
   </div>
 
