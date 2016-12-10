@@ -1,10 +1,17 @@
 package oristim
 
+/**
+* Clase que contiene juegos comprados
+*/
+
 class Carrito {
 
+	// El carrito esta asociado a un usuario.
 	public Usuario usuario
-        public String estado = 'p'
-        public List juegos = []
+	// El estado de un carrito puede ser P o C.
+    public String estado = 'p'
+    // Una lista de juegos agregados.
+    public List juegos = []
 	public static hasMany = [juegos: Juego]
 	//static hasOne = [usuario:Usuario]
         

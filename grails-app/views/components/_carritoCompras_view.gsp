@@ -11,14 +11,20 @@
 	    			def smgr = new SessionManager(request.session)
 	    			def uid = smgr.getCurrentUsr().id
 	    			def c = Usuario.get(uid).carritoTemp
-	    			def juegosCarrito = c.juegos	
+	    			def juegosCarrito = c.juegos
+	    			def total = juegosCarrito.sum{it.precio}	
 		    %>
 		   	    <g:each var="juego" in="${juegosCarrito}">
-			      	<a href="#!" id="${juego.id}" class="collection-item">${juego.nombre}<span id="${juego.id}" class="delete-elem new badge">Borrar</span></a>
+			      	<a href="#!" id="${juego.id}" class="collection-item"> <b>(${juego.precio} $)</b> ${juego.nombre} <span id="${juego.id}" class="delete-elem new badge">Borrar</span></a>
 		        </g:each>
+		        <a href="#!" class="collection-item active">
+	    		<i class="material-icons dp48">credit_card</i>
+	    		Total de la Compra: <h5>${total} $</h5>
+	    		</a>
 	        <%}catch(Exception e){
 	    		println("No hay juegos")			
 	    	}%>
+
       	</div>
       	<a href="#!" id="checkOut" class="waves-effect waves-light btn modal-close">
       		Confirmar

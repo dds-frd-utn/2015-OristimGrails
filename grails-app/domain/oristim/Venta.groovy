@@ -1,9 +1,22 @@
 package oristim
 
-class Venta {
+/**
+* La venta se produce cuando el usuario ha decidido que 
+* va a comprar un carrito y hace checkout del mismo.
+* agregando de "forma simbolica" su tarjeta de cretido y confirmando
+* la compra.
+*
+* Las ventas concretadas se almacenan en la base de datos.
+*/
 
+class Venta {
+	// Un carrito cerrado. tiene adentro los juegos.
 	Carrito carrito
+	// total de la compra
 	Double total
+	// la fecha que se hizo la compra
+	// Codigo de la opreacion.
+	// Integer codigo
 	Date fecha
     //static hasOne = [carrito:Carrito]
         

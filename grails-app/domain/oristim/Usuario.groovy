@@ -1,12 +1,22 @@
 package oristim
 
-class Usuario {
+/**
+* El usuario identifica a una persona.
+* a un cliente ...
+*/
 
+class Usuario {
+	// nombre con el que se logea
 	String username
+	// contraseña
 	String password
+	// nombre del chabon
 	String nombre
+	// apellido
 	String apellido
+	// el email. No se usa nunca ...
 	String email
+	// El carrito temporal.
 	CarritoTemp carritoTemp
 
 	static mapping = {
