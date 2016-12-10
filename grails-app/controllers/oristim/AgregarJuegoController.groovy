@@ -113,7 +113,12 @@ class AgregarJuegoController {
        println c.juegos
 
        // Decis que todo fuciono bien.
-       render "success"
+       def total = c.juegos.sum{it.precio}
+       // render "success"
+       render(contentType: 'text/json'){[
+            result: 'success'
+            ,total: total
+        ]}    
     }
 
     /**

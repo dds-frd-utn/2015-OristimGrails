@@ -19,7 +19,7 @@
 		        </g:each>
 		        <a href="#!" class="collection-item active">
 	    		<i class="material-icons dp48">credit_card</i>
-	    		Total de la Compra: <h5>${total} $</h5>
+	    		Total de la Compra: <h5 id="total">${total} $</h5>
 	    		</a>
 	        <%}catch(Exception e){
 	    		println("No hay juegos")			
@@ -52,6 +52,9 @@
 		var time = 1000;
 		$.ajax( "/borrar/"+gameId ).done(function( resp ){	
 			Materialize.toast('Juego eliminado', time);
+			// alert(resp.total)
+			if(resp.total == 0) $("#total").text('0 $');
+			$("#total").text(resp.total + " $");
 		});
 			
 	});

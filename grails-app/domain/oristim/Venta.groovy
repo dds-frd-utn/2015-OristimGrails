@@ -15,11 +15,9 @@ class Venta {
 	// total de la compra
 	Double total
 	// la fecha que se hizo la compra
-	// Codigo de la opreacion.
-	// Integer codigo
 	Date fecha
-    //static hasOne = [carrito:Carrito]
-        
+    // Codigo de la opreacion.
+	Integer codigo
 	static mapping = {
 		version false
 	}
