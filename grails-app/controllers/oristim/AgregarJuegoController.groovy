@@ -144,4 +144,28 @@ class AgregarJuegoController {
         
     }
 
+
+     /**
+    * Elimina el carrito actual del usuario.
+    * Lo borra de la base de datos
+    * @desc Url definida en URL mapings
+    * @url /agregarJuego/eliminarCarrito
+    */
+
+    def eliminarCarrito(){
+        // Sesion manager
+        def smgr = new SessionManager(request.session) 
+        // usuario en sesion
+        def u = Usuario.get(smgr.getCurrentUsr().id)
+        // carrito temporal del usuario.
+        def c = u.carritoTemp
+
+        u.carritoTemp.delete()
+        u.save(flush:true)
+        
+        u.carritoTemp = new CarritoTemp().save(flush:true)
+        u.save(flush:true)
+
+    }
+
 }

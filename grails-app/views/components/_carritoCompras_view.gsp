@@ -29,6 +29,9 @@
       	<a href="#!" id="checkOut" class="waves-effect waves-light btn modal-close">
       		Confirmar
       	</a>
+      	<a href="#!" id="cancel" onclick = "cancelar()"class="waves-effect waves-light btn modal-close">
+      		Cancelar Carrito
+      	</a>
 
 	</div>
 	<div class="modal-footer">
@@ -58,4 +61,9 @@
 		});
 			
 	});
+
+	function cancelar(){
+		$.ajax( "/agregarJuego/eliminarCarrito" )
+		location.reload()
+	}
 </script>
