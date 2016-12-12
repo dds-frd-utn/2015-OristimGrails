@@ -36,7 +36,7 @@
   %{-- <img src="/img/fd.png" width="10%"> --}%
   <div class="footer-copyright">
     <div class="container">
-    © 2015 Copyright Oristim
+    © 2016 Copyright Oristim
     </div>
 
   </div>

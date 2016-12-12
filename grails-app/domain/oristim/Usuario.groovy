@@ -25,12 +25,13 @@ class Usuario {
 	}
 
 	static constraints = {
-		username nullable: false, maxSize: 45, unique: true
+		username nullable: false, unique: true, matches: "[a-zA-Z-0-1]+"
 		carritoTemp nullable: true
-		password nullable: false, maxSize: 45
-		nombre nullable: false, maxSize: 45
-		apellido nullable: false, maxSize: 45
-		email nullable: false, maxSize: 45, unique: true
+		password nullable: false, blank:false
+		nombre nullable: false, blank:false, matches: "[a-zA-Z]+"
+		apellido nullable: false, blank:false, matches: "[a-zA-Z]+"
+		email email:true, nullable: false, unique: true, blank:false
+
 	}
 
 	// Defino los seters y los geters solo porque la clase Session Manager los necesita.

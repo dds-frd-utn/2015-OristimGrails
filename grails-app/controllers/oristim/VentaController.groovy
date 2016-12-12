@@ -40,36 +40,10 @@ class VentaController {
         def j = c2.juegos
         // calculamos el total de la movida.
         def total = j.sum{ it.precio }
-        //Creo un carrito piola y lo guardo en la db.
-        // este carrito no se elimina mas.
-        def carro = new Carrito(
-            usuario: usuario,
-            estado: "f",
-            juegos: j
-        ).save(flush:true)
         
-
-        println("voy a agregar a la compra unos juegos. ${j}")
-        println("${params.nombre}");
-        //vamos a crear la venta y guardar en la db.
-        new Venta(
-            usuario: usuario,
-            nombre: params.nombre,
-            apellido: params.apellido,
-            tarjeta: params.tarjeta,
-            //Estuve renegando como un hdp porque martin
-            // escribio mal el nombre del codigo, la ptm.
-            codigoseg: params.codigoseg,
-            vencimiento: params.vencimiento,
-            total: total,
-            fecha: new Date().parse("d/M/yyyy", "14/12/2016"),
-            codigo: "${(int) (Math.random()*(10000 - 0 )) + 0 + 10000}",
-            carrito: carro
-        ).save(flush:true)
         println("Se ha concretado la compra")
 
         //elimino el carrito temporal y creo uno nuevo.
-        redirect(controller:"AgregarJuego", action: "eliminarCarrito")
         println("eliminamos el carrito")
 
         
@@ -94,7 +68,7 @@ class VentaController {
 
 
 
- /*       if (ventaInstance == null) {
+        if (ventaInstance == null) {
             notFound()
             return
         }
@@ -104,15 +78,44 @@ class VentaController {
             return
         }
 
-        ventaInstance.save flush:true
+        //Creo un carrito piola y lo guardo en la db.
+        // este carrito no se elimina mas.
+        
+        def carro = new Carrito(
+            usuario: usuario,
+            estado: "f",
+            juegos: j
+        ).save(flush:true)
+        
+
+        println("voy a agregar a la compra unos juegos. ${j}")
+        println("${params.nombre}");
+        //vamos a crear la venta y guardar en la db.
+        def venta = new Venta(
+            usuario: usuario,
+            nombre: params.nombre,
+            apellido: params.apellido,
+            tarjeta: params.tarjeta,
+            //Estuve renegando como un hdp porque martin
+            // escribio mal el nombre del codigo, la ptm.
+            codigoseg: params.codigoseg,
+            vencimiento: params.vencimiento,
+            total: total,
+            fecha: new Date().parse("d/M/yyyy", "14/12/2016"),
+            codigo: "${(int) (Math.random()*(10000 - 0 )) + 0 + 10000}",
+            carrito: carro
+        ).save(flush:true)
+        //ventaInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'venta.label', default: 'Venta'), ventaInstance.id])
-                redirect ventaInstance
+                redirect(controller:"AgregarJuego", action: "eliminarCarrito")
+                
+                //redirect ventaInstance
             }
             '*' { respond ventaInstance, [status: CREATED] }
-        } */
+        } 
     }
 
     def edit(Venta ventaInstance) {

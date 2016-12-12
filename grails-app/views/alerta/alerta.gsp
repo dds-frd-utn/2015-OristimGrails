@@ -352,7 +352,7 @@ cursor: pointer;
 
 <div class="win8-notif-body">
 <div class="mid">
-<a href="/" class=""><img src="/img/oristim100tifiko.png" style="margin-top:10px; margin-left: -20%;"width="15%"></a>
+<a href="/" class=""><img src="/img/oristimPiola.png" style="margin-top:10px; margin-left: -20%;"width="20%"></a>
 <a href="/" class=""><img src="/img/hardcode.png" style=""width="27%"></a>
 <h3>Compra Basicamente Realizada.</h3>
 <p>Queremos agradecerle a usted, basicamente, por comprar nuestros productos de porqueria que ofrecemos. Jajaja, saludos.</p>

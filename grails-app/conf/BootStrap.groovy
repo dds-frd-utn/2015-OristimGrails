@@ -11,7 +11,7 @@ class BootStrap {
 			,password: 'usuario'
 			,nombre: 'Usuario'
 			,apellido: 'Casual'
-			,email: 'finaldediseño@hotmail.com'
+			,email: 'basicamente@hotmail.com'
     	).save(flush:true)
     	new Juego(
     		alias: 'COD'
