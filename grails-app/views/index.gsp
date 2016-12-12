@@ -30,7 +30,7 @@
             </h4>
     </div>	
     <div class="section white">
-        <div class="row container">				 
+        <div id="juegos_view" class="row container">				 
             <!-- Mostrar Ofertas de Juegos -->
             <g:render template="/components/listaOfertas_view"/>
         </div>

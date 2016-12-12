@@ -1,20 +1,4 @@
 <%@ page import="oristim.Juego" %>
-<style type="text/css">
-	.price{
-		text-align: center;
-		margin-top: 25%;
-		margin-left: 63%;
-		background-color: #936262;
-		width: 35%;
-		height: 30px;
-		position: absolute;
-		border-radius: 15px;
-		color: white;
-	}
-	.price p{
-		margin-top: 4px;
-	}
-</style>
 
 %{-- Ruta de imagenes para juegos. De la forma: "img/juego1.jpg" --}%
 %{-- <% def juegosList= Juego.getAll()%> --}%
@@ -32,7 +16,6 @@
 		      		${juego.nombre}
 		      		<i class="material-icons right">more_vert</i>
 		      	</span>
-		      	<p><a href="#">Mas información</a></p>
 		    </div>
 		    <div class="card-reveal">
 		      	<span class="card-title grey-text text-darken-4">

@@ -5,6 +5,12 @@ html, body {
     line-height: 20px;
 }
 
+
+#juegos_view {
+    margin: auto;
+    width: 98%;
+}
+
 .row .col.m7 {
     /*width: 25.333%;*/
     /*width: 33.333%;*/
