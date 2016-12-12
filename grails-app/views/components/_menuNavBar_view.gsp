@@ -5,18 +5,15 @@
 	  <div class="nav-wrapper">
 	    
 	    <ul class="left hide-on-med-and-down">
-	    	<li><a href="/" class=""><img src="/img/oristim100tifiko.png" style="margin-top:10px"width="125"></a> </li>
+	    	<li><a href="/" class=""><img src="/img/oristim.png" style="margin-top:15px"width="125"></a> </li>
 	    </ul>
 	  
 	    <ul class="left hide-on-med-and-down">
-	   %{-- 	<li><a id="ofertas" href="/">Ofertas</a></li>
-	   --}%
 	      	<!-- Activar Dropdown de Consolas -->
 	      	<li><a class="dropdown-button" href="#!" data-activates="consolas">Consolas<i class="material-icons right">arrow_drop_down</i></a></li>
 
 	      	<!-- Activar Dropdown de Genero -->
-	      	<li><a class="dropdown-button" href="#!" data-activates="genero">Genero<i class="material-icons right">arrow_drop_down</i></a></li>
-
+	      	<li><a class="dropdown-button" href="#!" data-activates="genero">Género<i class="material-icons right">arrow_drop_down</i></a></li>
 	    </ul>
 
 	    <ul class="right hide-on-med-and-down">

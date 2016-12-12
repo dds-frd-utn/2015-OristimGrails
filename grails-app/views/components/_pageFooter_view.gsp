@@ -4,7 +4,7 @@
       <div class="col l6 s12">
         <h5 class="white-text">Sobre nosotros</h5>
         <p class="grey-text text-lighten-4">
-          Somos gente de sistemas que cursa <strike>tercero</strike> cuarto. Nos gusta viciar, y esto es para el tp final de DDS.
+          Somos gente de sistemas que nos gusta viciar, y esto es para el tp final de DDS - UTN FRD.
         </p>
   <img src="/img/hardcode.png" width="60%">
 
@@ -36,7 +36,7 @@
   %{-- <img src="/img/fd.png" width="10%"> --}%
   <div class="footer-copyright">
     <div class="container">
-    © 2015 Copyright Oristim. Prohibido el copypasteo.
+    © 2015 Copyright Oristim
     </div>
 
   </div>
@@ -45,12 +45,3 @@
   <g:render template="/components/integrantes_view"/>
   
 </footer>
-<!--<script type="text/javascript">
-  /*Cargar Integrantes*/
-  $("#modalIntegrantes").load(".//components/integrantes_view.html"); 
-</script>-->
-
-<!--<script type="text/javascript">
-  /*Cargar Mas Informacion*/
-  $("#modalMasInformacion").load(".//components/masinformacion_view.html"); 
-</script>-->

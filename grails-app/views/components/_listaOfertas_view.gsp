@@ -32,11 +32,11 @@
 		      		${juego.nombre}
 		      		<i class="material-icons right">more_vert</i>
 		      	</span>
-		      	<p><a href="#">Mas informacion</a></p>
+		      	<p><a href="#">Mas información</a></p>
 		    </div>
 		    <div class="card-reveal">
 		      	<span class="card-title grey-text text-darken-4">
-		      		Informacion:
+		      		Información:
 		      		<i class="material-icons right">close</i>
 		      	</span>
 		      	<p>${juego.informacion}</p>	      		
@@ -75,7 +75,7 @@
 				
 			})
 			.fail(function(){
-				Materialize.toast('Error al agregar juego', 4000 , 'errorMsg');
+				Materialize.toast('Error al agregar juego. Juego ya comprado.', 4000 , 'errorMsg');
 			});
 
                

@@ -15,11 +15,11 @@
 	    			def total = juegosCarrito.sum{it.precio}	
 		    %>
 		   	    <g:each var="juego" in="${juegosCarrito}">
-			      	<a href="#!" id="${juego.id}" class="collection-item"> <b>(${juego.precio} $)</b> ${juego.nombre} <span id="${juego.id}" class="delete-elem  badge new ">Eliminar</span></a>
+			      	<a href="#!" id="${juego.id}" class="collection-item"> <b>${juego.nombre} ($${juego.precio})</b> <span id="${juego.id}" class="delete-elem  badge new ">Eliminar</span></a>
 		        </g:each>
 		        <a href="#!" class="collection-item active">
 	    		<i class="material-icons dp48">credit_card</i>
-	    		Total de la Compra: <h5 id="total">${total} $</h5>
+	    		Total de la Compra: <h5 id="total" align="right">$${total}</h5>
 	    		</a>
 	        <%}catch(Exception e){
 	    		println("No hay juegos")			
@@ -43,10 +43,6 @@
 
 <script type="text/javascript" src="/jquery/jquery.js"></script>
 <script type="text/javascript">
-	
-	//$("#checkOut").click(function(){
-	//	Materialize.toast('Checkout realizado !', 7000 , null)
-	//});
 
 	$(".delete-elem").click(function(){
 		
@@ -56,9 +52,8 @@
 		var time = 1000;
 		$.ajax( "/borrar/"+gameId ).done(function( resp ){	
 			Materialize.toast('Juego eliminado', time);
-			// alert(resp.total)
-			if(resp.total == 0) $("#total").text('0 $');
-			$("#total").text(resp.total + " $");
+			$("#total").text("$ " + resp.total);
+			if(resp.total == 0) $("#total").text("$0");
 		});
 			
 	});
