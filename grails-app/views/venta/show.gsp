@@ -50,6 +50,60 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${ventaInstance?.apellido}">
+				<li class="fieldcontain">
+					<span id="apellido-label" class="property-label"><g:message code="venta.apellido.label" default="Apellido" /></span>
+					
+						<span class="property-value" aria-labelledby="apellido-label"><g:fieldValue bean="${ventaInstance}" field="apellido"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ventaInstance?.codigo}">
+				<li class="fieldcontain">
+					<span id="codigo-label" class="property-label"><g:message code="venta.codigo.label" default="Codigo" /></span>
+					
+						<span class="property-value" aria-labelledby="codigo-label"><g:fieldValue bean="${ventaInstance}" field="codigo"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ventaInstance?.codigoseg}">
+				<li class="fieldcontain">
+					<span id="codigoseg-label" class="property-label"><g:message code="venta.codigoseg.label" default="Codigoseg" /></span>
+					
+						<span class="property-value" aria-labelledby="codigoseg-label"><g:fieldValue bean="${ventaInstance}" field="codigoseg"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ventaInstance?.nombre}">
+				<li class="fieldcontain">
+					<span id="nombre-label" class="property-label"><g:message code="venta.nombre.label" default="Nombre" /></span>
+					
+						<span class="property-value" aria-labelledby="nombre-label"><g:fieldValue bean="${ventaInstance}" field="nombre"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ventaInstance?.tarjeta}">
+				<li class="fieldcontain">
+					<span id="tarjeta-label" class="property-label"><g:message code="venta.tarjeta.label" default="Tarjeta" /></span>
+					
+						<span class="property-value" aria-labelledby="tarjeta-label"><g:fieldValue bean="${ventaInstance}" field="tarjeta"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${ventaInstance?.vencimiento}">
+				<li class="fieldcontain">
+					<span id="vencimiento-label" class="property-label"><g:message code="venta.vencimiento.label" default="Vencimiento" /></span>
+					
+						<span class="property-value" aria-labelledby="vencimiento-label"><g:fieldValue bean="${ventaInstance}" field="vencimiento"/></span>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:ventaInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

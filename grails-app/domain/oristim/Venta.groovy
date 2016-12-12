@@ -18,14 +18,23 @@ class Venta {
 	Date fecha
     // Codigo de la opreacion.
 	Integer codigo
+	// Tarjeta
+	String tarjeta
+	// Código de seguridad
+	String codigoseg
+	//Nombre
+	String nombre
+	//Apellido
+	String apellido
+	//Vencimiento
+	String vencimiento
+
 	static mapping = {
-		version false
 	}
 
 	static constraints = {
-		carrito nullable: false, unique: true               
-        carrito unique: true               
+		carrito nullable: true              
         total nullable: false
-        fecha nullable: false
+        fecha nullable: true
 	}
 }

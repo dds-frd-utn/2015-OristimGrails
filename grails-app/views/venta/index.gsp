@@ -30,6 +30,12 @@
 					
 						<g:sortableColumn property="fecha" title="${message(code: 'venta.fecha.label', default: 'Fecha')}" />
 					
+						<g:sortableColumn property="apellido" title="${message(code: 'venta.apellido.label', default: 'Apellido')}" />
+					
+						<g:sortableColumn property="codigo" title="${message(code: 'venta.codigo.label', default: 'Codigo')}" />
+					
+						<g:sortableColumn property="codigoseg" title="${message(code: 'venta.codigoseg.label', default: 'Codigoseg')}" />
+					
 					</tr>
 				</thead>
 				<tbody>
@@ -41,6 +47,12 @@
 						<td>${fieldValue(bean: ventaInstance, field: "total")}</td>
 					
 						<td><g:formatDate date="${ventaInstance.fecha}" /></td>
+					
+						<td>${fieldValue(bean: ventaInstance, field: "apellido")}</td>
+					
+						<td>${fieldValue(bean: ventaInstance, field: "codigo")}</td>
+					
+						<td>${fieldValue(bean: ventaInstance, field: "codigoseg")}</td>
 					
 					</tr>
 				</g:each>

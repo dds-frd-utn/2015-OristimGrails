@@ -161,10 +161,13 @@ class AgregarJuegoController {
         def c = u.carritoTemp
 
         u.carritoTemp.delete()
-        u.save(flush:true)
+      //  u.save(flush:true)
         
-        u.carritoTemp = new CarritoTemp().save(flush:true)
+        u.carritoTemp = new CarritoTemp().save()
         u.save(flush:true)
+
+        println("Se realizó la compra y se eliminó el carrito")
+        render(view:"/alerta/alerta")
 
     }
 

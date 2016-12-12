@@ -9,8 +9,8 @@
 	    </ul>
 	  
 	    <ul class="left hide-on-med-and-down">
-	    	<li><a id="ofertas" href="/Oristim">Ofertas</a></li>
-	      	
+	   %{-- 	<li><a id="ofertas" href="/">Ofertas</a></li>
+	   --}%
 	      	<!-- Activar Dropdown de Consolas -->
 	      	<li><a class="dropdown-button" href="#!" data-activates="consolas">Consolas<i class="material-icons right">arrow_drop_down</i></a></li>
 

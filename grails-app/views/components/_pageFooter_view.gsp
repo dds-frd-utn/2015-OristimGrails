@@ -34,13 +34,11 @@
   <div class="footer-copyright">
     <div class="container">
     © 2015 Copyright Oristim. Prohibido el copypasteo.
-    <a class="modal-trigger right" href="#masinformacion">Mas información</a>
     </div>
   </div>
 
   <!--Cargar integrantes del proyecto-->
   <g:render template="/components/integrantes_view"/>
-  <g:render template="/components/masinformacion_view"/>
   
 </footer>
 <!--<script type="text/javascript">

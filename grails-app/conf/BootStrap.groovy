@@ -24,7 +24,7 @@ class BootStrap {
     		alias: 'COD'
 			,categoria: 'fps'
 			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
+			,imgroute: "img/img8.jpg"
 			,informacion: "Informacion no cargada."
 			,nombre: 'Call of duty 4'
 			,plataforma: 'windows'
@@ -34,7 +34,7 @@ class BootStrap {
     		alias: 'WOW'
 			,categoria: 'rpg'
 			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
+			,imgroute: "img/img4.jpg"
 			,informacion: "Informacion no cargada."
 			,nombre: 'Wolrld of warcraft'
 			,plataforma: 'windows'

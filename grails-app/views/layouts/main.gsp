@@ -17,7 +17,7 @@
 		<g:layoutHead/>
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner"><a href="/Oristim"><asset:image src="oristim.png" alt="Oristim"/></a></div>
+		<div id="grailsLogo" role="banner"><a href="/"><asset:image src="oristim.png" alt="Oristim"/></a></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

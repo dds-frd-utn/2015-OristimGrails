@@ -11,8 +11,8 @@ class Carrito {
 	// El estado de un carrito puede ser P o C.
     public String estado = 'p'
     // Una lista de juegos agregados.
-    public List juegos = []
-	public static hasMany = [juegos: Juego]
+    List juegos = []
+	static hasMany = [juegos: Juego]
 	//static hasOne = [usuario:Usuario]
         
 	static mapping = {
@@ -38,10 +38,6 @@ class Carrito {
 	String getEstado(){
 		return this.estado
 	}
-        
-        def addJuego(Juego unJuego){
-            this.juegos.push(unJuego)
-        }
         
  
 }

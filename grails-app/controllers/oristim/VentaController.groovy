@@ -1,7 +1,8 @@
 package oristim
 
 
-
+import oritisim.*
+import session.*
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -25,7 +26,74 @@ class VentaController {
 
     @Transactional
     def save(Venta ventaInstance) {
-        if (ventaInstance == null) {
+        // traigo esta movida para llenar el carrito
+        // Session manager
+        def smgr = new SessionManager(request.session)
+        // Traemos el usuario de la sesion.
+        def u = smgr.getCurrentUsr()
+        // Como a veces tiene errores, lo buscamos
+        // En la base de datos. jeje.
+        def usuario = Usuario.get(u.id)
+        // traemos el carrito temporal del usuario.
+        def c2 = usuario.carritoTemp
+        //traigo los juegos en el carrito.
+        def j = c2.juegos
+        // calculamos el total de la movida.
+        def total = j.sum{ it.precio }
+        //Creo un carrito piola y lo guardo en la db.
+        // este carrito no se elimina mas.
+        def carro = new Carrito(
+            usuario: usuario,
+            estado: "f",
+            juegos: j
+        ).save(flush:true)
+        
+
+        println("voy a agregar a la compra unos juegos. ${j}")
+        println("${params.nombre}");
+        //vamos a crear la venta y guardar en la db.
+        new Venta(
+            nombre: params.nombre,
+            apellido: params.apellido,
+            tarjeta: params.tarjeta,
+            //Estuve renegando como un hdp porque martin
+            // escribio mal el nombre del codigo, la ptm.
+            codigoseg: params.codigoseg,
+            vencimiento: params.vencimiento,
+            total: total,
+            fecha: new Date().parse("d/M/yyyy", "14/12/2016"),
+            codigo: "111",
+            carrito: carro
+        ).save(flush:true)
+        println("Se ha concretado la compra")
+
+        //elimino el carrito temporal y creo uno nuevo.
+        redirect(controller:"AgregarJuego", action: "eliminarCarrito")
+        println("eliminamos el carrito")
+
+        
+
+    // total de la compra
+    // la fecha que se hizo la compra
+    // Codigo de la opreacion.
+    // Tarjeta
+    // Código de seguridad
+    //Nombre
+    //Apellido
+    //Vencimiento
+
+
+
+
+
+
+
+
+
+
+
+
+ /*       if (ventaInstance == null) {
             notFound()
             return
         }
@@ -43,7 +111,7 @@ class VentaController {
                 redirect ventaInstance
             }
             '*' { respond ventaInstance, [status: CREATED] }
-        }
+        } */
     }
 
     def edit(Venta ventaInstance) {

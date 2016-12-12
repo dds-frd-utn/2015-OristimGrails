@@ -26,7 +26,7 @@
 	    	}%>
 
       	</div>
-      	<a href="#!" id="checkOut" class="waves-effect waves-light btn modal-close">
+      	<a href="/venta/create" id="checkOut" class="waves-effect waves-light btn modal-close">
       		Confirmar
       	</a>
       	<a href="#!" id="cancel" onclick = "cancelar()"class="waves-effect waves-light btn modal-close">
@@ -43,9 +43,10 @@
 
 <script type="text/javascript" src="/jquery/jquery.js"></script>
 <script type="text/javascript">
-	$("#checkOut").click(function(){
-		Materialize.toast('Checkout realizado !', 7000 , null)
-	});
+	
+	//$("#checkOut").click(function(){
+	//	Materialize.toast('Checkout realizado !', 7000 , null)
+	//});
 
 	$(".delete-elem").click(function(){
 		

@@ -1,31 +1,68 @@
-<%@ page import="oristim.Venta" %>
+<%@ page import="oristim.*" %>
+<%@ page import="session.*" %>
 
-
-
-<div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'carrito', 'error')} required">
-	<label for="carrito">
-		<g:message code="venta.carrito.label" default="Carrito" />
+<%
+def smgr = new SessionManager(request.session)
+// Traemos el usuario de la sesion.
+def u = smgr.getCurrentUsr()
+// Como a veces tiene errores, lo buscamos
+// En la base de datos. jeje.
+def usuario = Usuario.get(u.id)
+def c2 = usuario.carritoTemp
+//traigo los juegos en el carrito.
+def j = c2.juegos
+def total = j.sum{it.precio}
+%>
+<g:render template="carritoDescripcion"/>
+%{--<h3>Productos Elegidos:</h3>
+ <p>----------------------------------------------------------------------</p>
+<g:each var="juego" in="${j}">
+    <p>${juego.nombre}  ----- ${juego.precio} $</p>
+</g:each>
+<p>----------------------------------------------------------------------</p>
+<h3>Total ----- ${total} $ </h3> --}%
+<div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'nombre', 'error')} required">
+	<label for="nombre">
+		<g:message code="venta.nombre.label" default="Nombre" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="carrito" name="carrito.id" from="${oristim.Carrito.list()}" optionKey="id" required="" value="${ventaInstance?.carrito?.id}" class="many-to-one"/>
+	<g:textField name="nombre" required="" value="${ventaInstance?.nombre}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'total', 'error')} required">
-	<label for="total">
-		<g:message code="venta.total.label" default="Total" />
+<div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'apellido', 'error')} required">
+	<label for="apellido">
+		<g:message code="venta.apellido.label" default="Apellido" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="total" value="${fieldValue(bean: ventaInstance, field: 'total')}" required=""/>
+	<g:textField name="apellido" required="" value="${ventaInstance?.apellido}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'fecha', 'error')} required">
-	<label for="fecha">
-		<g:message code="venta.fecha.label" default="Fecha" />
+<div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'tarjeta', 'error')} required">
+	<label for="tarjeta">
+		<g:message code="venta.tarjeta.label" default="Tarjeta" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="fecha" precision="day"  value="${ventaInstance?.fecha}"  />
+	<g:textField name="tarjeta" required="" value="${ventaInstance?.tarjeta}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'codigoseg', 'error')} required">
+	<label for="codigoseg">
+		<g:message code="venta.codigoseg.label" default="Codigoseg" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="codigoseg" required="" value="${ventaInstance?.codigoseg}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'vencimiento', 'error')} required">
+	<label for="vencimiento">
+		<g:message code="venta.vencimiento.label" default="Vencimiento" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="vencimiento" required="" value="${ventaInstance?.vencimiento}"/>
 
 </div>
 
