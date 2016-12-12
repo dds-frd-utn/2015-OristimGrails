@@ -13,8 +13,6 @@
 	    			def c = Usuario.get(uid).carritoTemp
 	    			def juegosCarrito = c.juegos
 	    			def total = juegosCarrito.sum{it.precio}
-					// Esto es para que fede no rompa los huevos con que se 
-					// ve el null.
 	    			if (total == null)	 total = 0
 		    %>
 		   	    <g:each var="juego" in="${juegosCarrito}">
@@ -55,19 +53,13 @@
 		var time = 1000;
 		$.ajax( "/borrar/"+gameId ).done(function( resp ){	
 			Materialize.toast('Juego eliminado', time);
-<<<<<<< HEAD
 			$("#total").text("$ " + resp.total);
 			if(resp.total == 0) $("#total").text("$0");
-=======
 			if(resp.total == null){
 				resp.total = 0
-				// alert(resp.total)
-				// $("#total").text('0 $')
 			}
-			$("#total").text(resp.total + " $");
->>>>>>> origin/master
-		});
-			
+			$("#total").text("$ " + resp.total);
+		});	
 	});
 
 	function cancelar(){
