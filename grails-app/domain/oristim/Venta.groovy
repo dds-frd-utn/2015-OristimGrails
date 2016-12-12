@@ -28,6 +28,8 @@ class Venta {
 	String apellido
 	//Vencimiento
 	String vencimiento
+	// Usuario que efectuo la compra
+	Usuario usuario
 
 	static mapping = {
 	}

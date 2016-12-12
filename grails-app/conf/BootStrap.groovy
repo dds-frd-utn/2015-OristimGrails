@@ -24,9 +24,9 @@ class BootStrap {
     		alias: 'COD'
 			,categoria: 'fps'
 			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/img8.jpg"
+			,imgroute: "http://vignette2.wikia.nocookie.net/callofduty/images/7/76/Game_cover_art_BOIII.jpg/revision/latest?cb=20160211194000"
 			,informacion: "Informacion no cargada."
-			,nombre: 'Call of duty 4'
+			,nombre: 'Black OPS 3'
 			,plataforma: 'windows'
 			,precio: 500
     	).save()
@@ -34,9 +34,9 @@ class BootStrap {
     		alias: 'WOW'
 			,categoria: 'rpg'
 			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/img4.jpg"
+			,imgroute: "http://warcraft-5ddd.kxcdn.com/wp-content/uploads/2015/08/wow-legion-box-art-2.jpg"
 			,informacion: "Informacion no cargada."
-			,nombre: 'Wolrld of warcraft'
+			,nombre: 'WoW Legion'
 			,plataforma: 'windows'
 			,precio: 500
     	).save()
@@ -44,69 +44,39 @@ class BootStrap {
     		alias: 'ASC'
 			,categoria: 'estrategia'
 			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
+			,imgroute: "http://ecx.images-amazon.com/images/I/81MiS09nFPL._SL1500_.jpg"
 			,informacion: "Informacion no cargada."
 			,nombre: 'Assasins Creed 4'
 			,plataforma: 'xbox'
 			,precio: 500
     	).save()
     	new Juego(
-    		alias: '1'
+    		alias: 'pd2'
 			,categoria: 'fps'
 			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
+			,imgroute: "http://www.3djuegos.com/juegos/8743/payday_the_heist_2/fotos/ficha/payday_the_heist_2-2256705.jpg"
 			,informacion: "Informacion no cargada."
-			,nombre: 'Juego 1'
+			,nombre: 'Payday II'
 			,plataforma: 'windows'
 			,precio: 200
     	).save()
     	new Juego(
-    		alias: '2'
+    		alias: 'fc4'
 			,categoria: 'fps'
 			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
+			,imgroute: "http://img.gamefaqs.net/box/1/0/4/531104_front.jpg"
 			,informacion: "Informacion no cargada."
-			,nombre: 'Juego 2'
+			,nombre: 'Farming Simulator 15'
 			,plataforma: 'windows'
 			,precio: 200
     	).save()
     	new Juego(
-    		alias: '3'
+    		alias: 'eso'
 			,categoria: 'fps'
 			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
+			,imgroute: "http://www.gamedynamo.es/images/games/boxart/high/2544.jpg"
 			,informacion: "Informacion no cargada."
-			,nombre: 'Juego 3'
-			,plataforma: 'windows'
-			,precio: 200
-    	).save()
-    	new Juego(
-    		alias: '4'
-			,categoria: 'fps'
-			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
-			,informacion: "Informacion no cargada."
-			,nombre: 'Juego 4'
-			,plataforma: 'windows'
-			,precio: 200
-    	).save()
-    	new Juego(
-    		alias: '5'
-			,categoria: 'fps'
-			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
-			,informacion: "Informacion no cargada."
-			,nombre: 'Juego 5'
-			,plataforma: 'windows'
-			,precio: 200
-    	).save()
-    	new Juego(
-    		alias: '6'
-			,categoria: 'fps'
-			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "img/imgDfl.jpg"
-			,informacion: "Informacion no cargada."
-			,nombre: 'Juego 6'
+			,nombre: 'The Elder Scrolls Online'
 			,plataforma: 'windows'
 			,precio: 200
     	).save()

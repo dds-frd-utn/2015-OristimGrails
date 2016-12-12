@@ -34,7 +34,7 @@
 		<g:message code="juego.imgroute.label" default="Imgroute" />
 		
 	</label>
-	<g:textField name="imgroute" maxlength="45" value="${juegoInstance?.imgroute}"/>
+	<g:textField name="imgroute" maxlength="3400" value="${juegoInstance?.imgroute}"/>
 
 </div>
 

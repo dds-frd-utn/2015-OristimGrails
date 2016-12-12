@@ -22,7 +22,7 @@
     <div class="col s12 m7" >  
 	    <div class="card medium">
 		    <div class="card-image waves-effect waves-block waves-light">
-		    	<img class="activator" src="/${juego.imgroute}">
+		    	<img class="activator" src="${juego.imgroute}">
 		    </div>
 		   	<div class="price">
 		   		<p>Valor: $${juego.precio}</p>

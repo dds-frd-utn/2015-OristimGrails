@@ -25,15 +25,16 @@ class Juego {
     
 	static mapping = {
 		// version false
+		imgroute sqlType: 'longText' 
 	}
 
 	static constraints = {
-		alias nullable: true, maxSize: 45, unique: true
-		categoria nullable: false, maxSize: 45
+		alias nullable: true, unique: true
+		categoria nullable: false
 		descripcion nullable: true
-		imgroute nullable: true, maxSize: 45
+		imgroute nullable: true
 		informacion nullable: true
-		nombre nullable: false, maxSize: 45, unique: true
-		plataforma nullable: false, maxSize: 45
+		nombre nullable: false, unique: true
+		plataforma nullable: false
 	}
 }

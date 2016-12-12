@@ -10,7 +10,7 @@
 body
 {
 margin: 0px 0px 0px 0px;
-background-color: white;
+background-color: #7E7E7E !important;;
 color: black;
 }
 
@@ -117,17 +117,17 @@ cursor: pointer;
 
 .green{
 
-	background-color: rgb(50, 179, 106);
+	background-color: #313131;
 	color:white;
 }
 
 .green button{
-	background-color: rgb(50, 179, 106);
+	background-color: rgb(66, 66, 66);
 	cursor: pointer;
 	color: white;
 }
 .green .win8-notif-body{
-	background-color: rgb(50, 179, 106);
+	background-color: #313131;
 	color:white;
 }
 
@@ -352,8 +352,10 @@ cursor: pointer;
 
 <div class="win8-notif-body">
 <div class="mid">
-<h3>Basicamente Comprado.</h3>
-<p>Basicamente la compra ha sido realizara. Hardcode computacion te agradece basicamente por esto. jajajaj saludos.</p>
+<a href="/" class=""><img src="/img/oristim100tifiko.png" style="margin-top:10px; margin-left: -20%;"width="15%"></a>
+<a href="/" class=""><img src="/img/hardcode.png" style=""width="27%"></a>
+<h3>Compra Basicamente Realizada.</h3>
+<p>Queremos agradecerle a usted, basicamente, por comprar nuestros productos de porqueria que ofrecemos. Jajaja, saludos.</p>
 <button class="win8-notif-button">OK</button>
 </div>
 </div>

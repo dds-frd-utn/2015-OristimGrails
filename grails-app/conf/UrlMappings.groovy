@@ -29,6 +29,8 @@ class UrlMappings {
         "/guardar"(controller:"AgregarJuego", action:"guardarCarrito")
 
         "500"(view:'/error')
+
+        "/alerta"(view:'/alerta/alerta')
         
 	}
 }

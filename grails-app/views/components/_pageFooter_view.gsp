@@ -4,8 +4,10 @@
       <div class="col l6 s12">
         <h5 class="white-text">Sobre nosotros</h5>
         <p class="grey-text text-lighten-4">
-          Somos gente de sistema que cursa tercero. Nos gusta viciar, y esto es para el tp final de DDS.
+          Somos gente de sistemas que cursa <strike>tercero</strike> cuarto. Nos gusta viciar, y esto es para el tp final de DDS.
         </p>
+  <img src="/img/hardcode.png" width="60%">
+
       </div>
       <div class="col l4 offset-l2 s12">
         <h5 class="white-text">Integrantes</h5>
@@ -31,10 +33,12 @@
       </div>
     </div>
   </div>
+  %{-- <img src="/img/fd.png" width="10%"> --}%
   <div class="footer-copyright">
     <div class="container">
     © 2015 Copyright Oristim. Prohibido el copypasteo.
     </div>
+
   </div>
 
   <!--Cargar integrantes del proyecto-->

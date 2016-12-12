@@ -53,6 +53,7 @@ class VentaController {
         println("${params.nombre}");
         //vamos a crear la venta y guardar en la db.
         new Venta(
+            usuario: usuario,
             nombre: params.nombre,
             apellido: params.apellido,
             tarjeta: params.tarjeta,
@@ -62,7 +63,7 @@ class VentaController {
             vencimiento: params.vencimiento,
             total: total,
             fecha: new Date().parse("d/M/yyyy", "14/12/2016"),
-            codigo: "111",
+            codigo: "${(int) (Math.random()*(10000 - 0 )) + 0 + 10000}",
             carrito: carro
         ).save(flush:true)
         println("Se ha concretado la compra")
