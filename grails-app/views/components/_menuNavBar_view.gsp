@@ -1,4 +1,4 @@
-
+<%@ page import="oristim.*" %>
 <!-- Nav Bar -->
 <div class="navbar-fixed">
 	<nav>
@@ -10,10 +10,10 @@
 	  
 	    <ul class="left hide-on-med-and-down">
 	      	<!-- Activar Dropdown de Consolas -->
-	      	<li><a class="dropdown-button" href="#!" data-activates="consolas">Consolas<i class="material-icons right">arrow_drop_down</i></a></li>
+	      	<li><a class="dropdown-button" href="#!" data-activates="consolas">Plataforma<i class="material-icons right">arrow_drop_down</i></a></li>
 
 	      	<!-- Activar Dropdown de Genero -->
-	      	<li><a class="dropdown-button" href="#!" data-activates="genero">Género<i class="material-icons right">arrow_drop_down</i></a></li>
+	      	<li><a class="dropdown-button" href="#!" data-activates="genero">Categoria<i class="material-icons right">arrow_drop_down</i></a></li>
 	    </ul>
 
 	    <ul class="right hide-on-med-and-down">
@@ -32,24 +32,36 @@
 	</nav>
 </div>
 
-<!-- Dropdown Consolas -->
+<% 
+	//Devuelve todas las categorias de los juegos.
+	def j = Juego.findAll()
+	def categorias = j.collect{it.categoria}.unique()
+	def plataformas = j.collect{it.plataforma}.unique()
+%>
+
+<!-- Dropdown plataformas -->
 <ul id="consolas" class="dropdown-content">
-  	<li><a id="consolasWindows" href="/plataforma/windows">Windows</a></li>
-  	<li><a id="consolasXbox" href="/plataforma/xbox">Xbox</a></li>
-  	<li><a id="consolasPlayStation" href="/plataforma/ps2">PlayStation</a></li>
+
+	%{-- Armamos dinamicamente la lista de plataformas (consolas) --}%
+	<g:each in="${plataformas}" var="plataforma">
+	  	<li><a id = "generoFPS" href="/categoria/${plataforma}">${plataforma}</a></li>
+	</g:each>
+  
   	<li class="divider"></li>
   	<li><a href="/">Todas</a></li>
 </ul>  
 
-<!-- Dropdown Genero -->
+<!-- Categorias -->
 <ul id="genero" class="dropdown-content">
-  	<li><a id = "generoFPS" href="/categoria/fps">FPS</a></li>
-  	<li><a id = "generoRol" href="/categoria/rpg">Rol</a></li>
-  	<li><a id = "generoEstrategia" href="/categoria/estrategia">Estrategia</a></li>
+
+	%{-- Armar dinamicamente Lista de Categorias --}%
+	<g:each in="${categorias}" var="categoria">
+	  	<li><a id = "generoFPS" href="/categoria/${categoria}">${categoria}</a></li>
+	</g:each>
+
   	<li class="divider"></li>
   	<li><a href="/">Todas</a></li>
 </ul>  
-
 <!-- Modal Carrito de Compras -->
 <g:render template="/components/carritoCompras_view"/>
 <!-- Modal de Login -->
