@@ -22,7 +22,12 @@ def total = j.sum{it.precio}
 <p>----------------------------------------------------------------------</p>
 <h3>Total ----- ${total} $ </h3> --}%
 <h1>Formulario de Pago</h1>
-<img src="/img/tcredito.png">
+<small>
+	<br><font color = "red" >Opere tranquilo. Este sitio es SEGURO <strike>Sergio</strike> para realizar compras electronicas.</font>
+</small>
+<br><br>
+<img src="/img/tcredito.png" width="30%" style="margin-left:30%">
+%{-- <img src="/img/oristim100tifiko.png" style="margin-top:10px"width="125"> --}%
 <div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		Nombre del Titular

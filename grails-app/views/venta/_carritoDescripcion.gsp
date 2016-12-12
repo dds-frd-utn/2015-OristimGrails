@@ -50,7 +50,7 @@ tbody > tr {
 <div class="container">
 
             
-    <h1> <i class="fa fa-shopping-cart"></i> Productos <small> - detalle</small> </h1>        
+    <h1> <i class="fa fa-shopping-cart"></i><small> Productos Actualmente en el Carrito</small> </h1>        
     <hr>   
     <table class="table table-hover">
       <thead>
@@ -73,6 +73,10 @@ tbody > tr {
           def c2 = usuario.carritoTemp
           //traigo los juegos en el carrito.
           def j = c2.juegos
+
+          // Hacemos la gran diego nuevamente
+          if(!j) 0/0
+
           def total = j.sum{it.precio}
         %>
       <g:each var="juego" in="${j}">

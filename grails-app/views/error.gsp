@@ -7,7 +7,12 @@
 	</head>
 	<body>
 		<g:if env="development">
-			<g:renderException exception="${exception}" />
+			<h1>Error</h1>
+			<h2>
+				No disponible
+			</h2>
+			<img src="http://www.aceroymagia.com/Images/articulo/cuadro-canvas-patan-muttley-autos-locos/01-cuadro-canvas-patan-muttley-autos-locos.jpg">
+			%{-- <g:renderException exception="${exception}" /> --}%
 		</g:if>
 		<g:else>
 			<ul class="errors">

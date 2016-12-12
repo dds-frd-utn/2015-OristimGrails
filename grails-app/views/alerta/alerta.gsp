@@ -356,7 +356,8 @@ cursor: pointer;
 <a href="/" class=""><img src="/img/hardcode.png" style=""width="27%"></a>
 <h3>Compra Basicamente Realizada.</h3>
 <p>Queremos agradecerle a usted, basicamente, por comprar nuestros productos de porqueria que ofrecemos. Jajaja, saludos.</p>
-<button class="win8-notif-button">OK</button>
+<button class="win8-notif-button"  onclick="window.location.href='/venta'">Mis Compras</button>
+<button class="win8-notif-button" id="movida">Volver al Menu</button>
 </div>
 </div>
 </div>
@@ -371,10 +372,10 @@ cursor: pointer;
 				$( "#notification" ).addClass(color);
 				def=color;
 				$( "#notification" ).fadeIn( "slow" );
-				$(".win8-notif-button").click(function(){
-				$(".notification").fadeOut("slow");
-				window.location.href = "/";
-	});
+				$("#movida").click(function(){
+					$(".notification").fadeOut("slow");
+					window.location.href = "/";
+				});
 	
 	}
 	

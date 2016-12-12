@@ -15,7 +15,7 @@
 	    			def total = juegosCarrito.sum{it.precio}	
 		    %>
 		   	    <g:each var="juego" in="${juegosCarrito}">
-			      	<a href="#!" id="${juego.id}" class="collection-item"> <b>(${juego.precio} $)</b> ${juego.nombre} <span id="${juego.id}" class="delete-elem new badge">Borrar</span></a>
+			      	<a href="#!" id="${juego.id}" class="collection-item"> <b>(${juego.precio} $)</b> ${juego.nombre} <span id="${juego.id}" class="delete-elem  badge new ">Eliminar</span></a>
 		        </g:each>
 		        <a href="#!" class="collection-item active">
 	    		<i class="material-icons dp48">credit_card</i>
