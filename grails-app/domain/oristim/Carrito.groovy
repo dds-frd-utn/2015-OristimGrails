@@ -7,9 +7,9 @@ package oristim
 class Carrito {
 
 	// El carrito esta asociado a un usuario.
-	public Usuario usuario
-	// El estado de un carrito puede ser P o C.
-    public String estado = 'p'
+	Usuario usuario
+	// El estado de un carrito puede ser P "pendiente" o F "finalizado".
+    String estado = 'p'
     // Una lista de juegos agregados.
     List juegos = []
 	static hasMany = [juegos: Juego]

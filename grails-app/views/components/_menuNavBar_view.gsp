@@ -5,7 +5,7 @@
 	  <div class="nav-wrapper">
 	    
 	    <ul class="left hide-on-med-and-down">
-	    	<li><a href="/" class=""><img src="/img/oristim.png" style="margin-top:15px"width="125"></a> </li>
+	    	<li><a href="/" class=""><img src="/img/oristimPiola.png" style="margin-top:15px"width="125"></a> </li>
 	    </ul>
 	  
 	    <ul class="left hide-on-med-and-down">
@@ -44,7 +44,7 @@
 
 	%{-- Armamos dinamicamente la lista de plataformas (consolas) --}%
 	<g:each in="${plataformas}" var="plataforma">
-	  	<li><a id = "generoFPS" href="/categoria/${plataforma}">${plataforma}</a></li>
+	  	<li><a id = "generoFPS" href="/plataforma/${plataforma}">${plataforma}</a></li>
 	</g:each>
   
   	<li class="divider"></li>

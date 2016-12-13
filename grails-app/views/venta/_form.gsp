@@ -13,7 +13,16 @@ def total = j.sum{it.precio}
 %>
 <g:render template="carritoDescripcion"/>
 <h1>Formulario de Pago</h1>
+<<<<<<< HEAD
 <img src="../img/tcredito.png" width="30%" style="margin-left:26%">
+=======
+<small>
+	<br><font color = "red" >Opere tranquilo. Este sitio es seguro para realizar compras electronicas.</font>
+</small>
+<br><br>
+<img src="/img/tcredito.png" width="30%" style="margin-left:30%">
+%{-- <img src="/img/oristim100tifiko.png" style="margin-top:10px"width="125"> --}%
+>>>>>>> origin/master
 <div class="fieldcontain ${hasErrors(bean: ventaInstance, field: 'nombre', 'error')} required">
 	<label for="nombre">
 		Nombre del Titular

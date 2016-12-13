@@ -35,8 +35,14 @@ class Venta {
 	}
 
 	static constraints = {
+		usuario nullable:true
 		carrito nullable: true              
-        total nullable: false
-        fecha nullable: true
+        total nullable: true , blank:true
+       	codigo nullable: true, blank:true
+        fecha nullable: true, blank:false
+        tarjeta /*creditCard: true,*/ blank:false, nullable:false
+		nombre nullable: false, blank:false, unique: false, matches: "[a-zA-Z]+"
+		apellido nullable: false, blank:false, unique: false, matches: "[a-zA-Z]+"
+
 	}
 }

@@ -12,8 +12,11 @@
 		   		<p>Valor: $${juego.precio}</p>
 		   	</div>
 		   	<div class="plataforma">
-		   		<p>${juego.plataforma}</p>
+		   		<p>${juego.plataforma}, ${juego.categoria}</p>
 		   	</div>
+		   %{-- 	<div class="categoria">
+		   		<p>${juego.categoria}</p>
+		   	</div> --}%
 		    <div class="card-content">
 		      	<span class="card-title activator grey-text text-darken-4">
 		      		${juego.nombre}
