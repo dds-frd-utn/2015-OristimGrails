@@ -50,15 +50,12 @@
 			          def smgr = new SessionManager(request.session)
 			          // Traemos el usuario de la sesion.
 			          def u = smgr.getCurrentUsr()
-			          // Como a veces tiene errores, lo buscamos
-			          // En la base de datos. jeje.
 			          def usuario = Usuario.get(u.id)
 
 			          def ventasUsuario = Venta.findAllByUsuario(usuario)
 
 		        %>
 				
-				%{-- <g:each in="${ventaInstanceList}" status="i" var="ventaInstance"> --}%
 				<g:each in="${ventasUsuario}" status="i" var="ventaInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
@@ -77,9 +74,6 @@
 					
 						
 						<td>${fieldValue(bean: ventaInstance, field: "total")} $</td>
-
-						%{-- <td>${fieldValue(bean: ventaInstance, field: "codigoseg")}</td> --}%
-					
 					</tr>
 				</g:each>
 				</tbody>

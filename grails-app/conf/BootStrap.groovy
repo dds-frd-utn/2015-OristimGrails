@@ -30,7 +30,7 @@ class BootStrap {
 			,imgroute: ""
 			,informacion: "Informacion no cargada."
 			,nombre: 'Uncharted 4'
-			,plataforma: 'Play Station 4'
+			,plataforma: 'PlayStation'
 			,precio: 500
     	).save()
     	new Juego(
@@ -45,7 +45,7 @@ class BootStrap {
     	).save()
     	new Juego(
     		alias: 'ASC'
-			,categoria: 'Aventuras'
+			,categoria: 'Aventura'
 			,descripcion: "Descripcion del nuevo Juego."
 			,imgroute: "http://ecx.images-amazon.com/images/I/81MiS09nFPL._SL1500_.jpg"
 			,informacion: "Informacion no cargada."
@@ -65,7 +65,7 @@ class BootStrap {
     	).save()
     	new Juego(
     		alias: 'fc4'
-			,categoria: 'Simulador'
+			,categoria: 'Rol'
 			,descripcion: "Descripcion del nuevo Juego."
 			,imgroute: "http://img.gamefaqs.net/box/1/0/4/531104_front.jpg"
 			,informacion: "Informacion no cargada."

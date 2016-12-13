@@ -56,7 +56,7 @@ tbody > tr {
       <thead>
         <tr>
           <th>Id</th>
-          <th>Código de Juego</th>
+          <th>Alias Juego</th>
           <th>Nombre</th>
           <th>Plataforma</th>
           <th>Precio</th>
@@ -85,39 +85,22 @@ tbody > tr {
           <td>${juego.alias}</td>
           <td>${juego.nombre}
           <td>${juego.plataforma}</td>
-          <td>${juego.precio} $</td>
+          <td>$${juego.precio}</td>
         </tr>
       </g:each>
       </tbody>
       </table>
       <table class="table table-hover">
       <thead>
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-          <th>Total de la Compra:</th>
-          <th>${total} $</th>
-        </tr>
-      </thead>
-      </table>
-      
-    
-    
-   
-        
+          <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>Total de la Compra:</th>
+            <th>$${total}</th>
+          </tr>
+        </thead>
+      </table>       
 </div>
-
 </body>
-</html>
-
-
-
- 
-    
-    
-    
-    
-    
-    
-    
+</html> 

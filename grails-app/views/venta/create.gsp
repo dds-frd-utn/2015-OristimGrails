@@ -25,33 +25,12 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-
-		%{--	<g:form controller="venta" action="save">
-	            <fieldset class="form">
-	            	<label>nombre: </label>
-	            	<g:textField name="nombre"/><br/>
-	            	<label>apellido: </label>
-	            	<g:textField name="apellido"/><br/>
-	            	<label>tarjeta: </label>
-	            	<g:textField name="tarjeta"/><br/>
-	            	<label>código de seguridad: </label>
-	            	<g:textField name="codigoseg"/><br/>
-	            	<label>vencimiento: </label>
-	            	<g:textField name="vencimiento"/><br/>
-	            	<fieldset class="buttons">
-	           			<g:actionSubmit value="Save"/>
-					</fieldset>
-	           	</fieldset>
-        	</g:form> --}%
-
-
-
 			<g:form url="[resource:ventaInstance, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="Garpame YA!" />
+					<g:submitButton name="create" value="Pagar" />
 				</fieldset>
 			</g:form>
 			
