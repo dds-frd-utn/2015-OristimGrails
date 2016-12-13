@@ -27,7 +27,7 @@
 	    	}%>
 
       	</div>
-      	<a href="/venta/create" id="checkOut" class="waves-effect waves-light btn modal-close">
+      	<a  id="checkOut" onclick = "validarCarrito()" class="waves-effect waves-light btn modal-close">
       		Confirmar
       	</a>
       	<a href="#!" id="cancel" onclick = "cancelar()"class="waves-effect waves-light btn modal-close">
@@ -65,5 +65,11 @@
 	function cancelar(){
 		$.ajax( "/agregarJuego/eliminarCarrito" )
 		location.reload()
+	}
+
+	function validarCarrito(){
+		if ( $(".delete-elem").length >  0)  // pregunto si tiene algun juego cargado
+		 	window.location.assign( "/venta/create" ) 
+		else Materialize.toast('El carrito está vacio, debe elegir al menos un juego.', 4000 , 'errorMsg');
 	}
 </script>
