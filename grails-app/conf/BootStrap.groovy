@@ -97,8 +97,8 @@ class BootStrap {
     	new Juego(
     		alias: 'UNC'
 			,categoria: 'FPS'
-			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: ""
+			,descripcion: "El retirado cazafortunas Nathan Drake vive felizmente su vida junto con su esposa Elena Fisher, pero todo se derrumba cuando aparece su hermano Sam, a quien Nathan daba por muerto. Sam necesita su ayuda para desenmascarar una conspiración histórica pirata del famoso aventurero Henry Avery y su legendario tesoro pirata."
+			,imgroute: "http://www.3djuegos.com/juegos/8184/uncharted_4/fotos/ficha/uncharted_4-3380449.jpg"
 			,informacion: "Informacion no cargada."
 			,nombre: 'Uncharted 4'
 			,plataforma: 'Play Station 4'

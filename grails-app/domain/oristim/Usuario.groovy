@@ -14,7 +14,7 @@ class Usuario {
 	String nombre
 	// apellido
 	String apellido
-	// el email. No se usa nunca ...
+	// el email
 	String email
 	// El carrito temporal.
 	CarritoTemp carritoTemp
