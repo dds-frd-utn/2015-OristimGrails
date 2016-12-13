@@ -66,7 +66,7 @@
 							${juego.nombre}
 						</span>
 						<span class="property-value" aria-labelledby="nombre-label">
-							${juego.precio} $
+							$${juego.precio}
 						</span>
 					</li>
 				</g:each>

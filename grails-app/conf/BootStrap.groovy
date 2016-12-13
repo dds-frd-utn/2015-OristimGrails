@@ -29,13 +29,8 @@ class BootStrap {
 			,descripcion: "Descripcion del nuevo Juego."
 			,imgroute: "http://img.gamefaqs.net/box/4/4/6/15446_front.jpg"
 			,informacion: "Informacion no cargada."
-<<<<<<< HEAD
-			,nombre: 'Uncharted 4'
-			,plataforma: 'PlayStation'
-=======
 			,nombre: 'WoW Burning Crusade'
 			,plataforma: 'Windows'
->>>>>>> origin/master
 			,precio: 500
     	).save()
     	new Juego(
