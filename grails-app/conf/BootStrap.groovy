@@ -11,8 +11,84 @@ class BootStrap {
 			,password: 'usuario'
 			,nombre: 'Usuario'
 			,apellido: 'Casual'
-			,email: 'finaldediseño@hotmail.com'
+			,email: 'basicamente@hotmail.com'
     	).save(flush:true)
+    	new Juego(
+    		alias: 'WOW1'
+			,categoria: 'Rol'
+			,descripcion: "Descripcion del nuevo Juego."
+			,imgroute: "http://img.gamefaqs.net/box/4/3/8/15438_front.jpg"
+			,informacion: "Informacion no cargada."
+			,nombre: 'WoW Classic'
+			,plataforma: 'Windows'
+			,precio: 500
+    	).save()
+    	new Juego(
+    		alias: 'WO2'
+			,categoria: 'Rol'
+			,descripcion: "Descripcion del nuevo Juego."
+			,imgroute: "http://img.gamefaqs.net/box/4/4/6/15446_front.jpg"
+			,informacion: "Informacion no cargada."
+<<<<<<< HEAD
+			,nombre: 'Uncharted 4'
+			,plataforma: 'PlayStation'
+=======
+			,nombre: 'WoW Burning Crusade'
+			,plataforma: 'Windows'
+>>>>>>> origin/master
+			,precio: 500
+    	).save()
+    	new Juego(
+    		alias: 'WOW3'
+			,categoria: 'Rol'
+			,descripcion: "Descripcion del nuevo Juego."
+			,imgroute: "http://www.mobygames.com/images/covers/l/129615-world-of-warcraft-wrath-of-the-lich-king-collector-s-edition-macintosh-other.jpg"
+			,informacion: "Informacion no cargada."
+			,nombre: 'WoW Wotlk'
+			,plataforma: 'Windows'
+			,precio: 500
+    	).save()
+    	new Juego(
+    		alias: 'WOW34'
+			,categoria: 'Rol'
+			,descripcion: "Descripcion del nuevo Juego."
+			,imgroute: "http://gamingillustrated.com/wp-content/uploads/2010/12/wow-box-front.jpg"
+			,informacion: "Informacion no cargada."
+			,nombre: 'WoW Cata'
+			,plataforma: 'Windows'
+			,precio: 500
+    	).save()
+    	new Juego(
+    		alias: 'WOWL5'
+			,categoria: 'Rol'
+			,descripcion: "Descripcion del nuevo Juego."
+			,imgroute: "http://i41.tinypic.com/20hvndu.jpg"
+			,informacion: "Informacion no cargada."
+			,nombre: 'WoW Pandaria'
+			,plataforma: 'Windows'
+			,precio: 500
+    	).save()
+    	new Juego(
+    		alias: 'WOWL6'
+			,categoria: 'Rol'
+			,descripcion: "Descripcion del nuevo Juego."
+			,imgroute: "http://s2.thcdn.com/productimg/0/600/600/11/10987811-1408121231-417043.jpg"
+			,informacion: "Informacion no cargada."
+			,nombre: 'WoW Warlods Of Draenor'
+			,plataforma: 'Windows'
+			,precio: 500
+    	).save()
+    	new Juego(
+    		alias: 'WOWL7'
+			,categoria: 'Rol'
+			,descripcion: "Descripcion del nuevo Juego."
+			,imgroute: "http://warcraft-5ddd.kxcdn.com/wp-content/uploads/2015/08/wow-legion-box-art-2.jpg"
+			,informacion: "Informacion no cargada."
+			,nombre: 'WoW Legion'
+			,plataforma: 'Windows'
+			,precio: 500
+    	).save()
+
     	new Juego(
     		alias: 'COD'
 			,categoria: 'FPS'
@@ -30,19 +106,10 @@ class BootStrap {
 			,imgroute: ""
 			,informacion: "Informacion no cargada."
 			,nombre: 'Uncharted 4'
-			,plataforma: 'PlayStation'
+			,plataforma: 'Play Station 4'
 			,precio: 500
     	).save()
-    	new Juego(
-    		alias: 'WOW'
-			,categoria: 'Rol'
-			,descripcion: "Descripcion del nuevo Juego."
-			,imgroute: "http://warcraft-5ddd.kxcdn.com/wp-content/uploads/2015/08/wow-legion-box-art-2.jpg"
-			,informacion: "Informacion no cargada."
-			,nombre: 'WoW Legion'
-			,plataforma: 'Windows'
-			,precio: 500
-    	).save()
+    	
     	new Juego(
     		alias: 'ASC'
 			,categoria: 'Aventura'

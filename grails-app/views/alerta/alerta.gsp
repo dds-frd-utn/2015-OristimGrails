@@ -349,6 +349,7 @@ cursor: pointer;
 
 
 <div id="notification" class="notification">
+<<<<<<< HEAD
 	<div class="win8-notif-body">
 		<div class="mid">
 			<a href="/" class=""><img src="/img/oristim.png" style="margin-top:10px;" width="15%"></a>
@@ -359,6 +360,19 @@ cursor: pointer;
 			<button class="win8-notif-button" id="movida">Volver al Menú</button>
 		</div>
 	</div>
+=======
+
+<div class="win8-notif-body">
+<div class="mid">
+<a href="/" class=""><img src="/img/oristimPiola.png" style="margin-top:10px; margin-left: -20%;"width="20%"></a>
+<a href="/" class=""><img src="/img/hardcode.png" style=""width="27%"></a>
+<h3>Muchas Gracias.</h3>
+<p>Su compra se ha realizado con exito. Esperamos que disfrute del producto.</p>
+<button class="win8-notif-button"  onclick="window.location.href='/venta'">Mis Compras</button>
+<button class="win8-notif-button" id="movida">Volver al Menu</button>
+</div>
+</div>
+>>>>>>> origin/master
 </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
