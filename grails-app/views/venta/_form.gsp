@@ -23,7 +23,7 @@ def total = j.sum{it.precio}
 <h3>Total ----- ${total} $ </h3> --}%
 <h1>Formulario de Pago</h1>
 <small>
-	<br><font color = "red" >Opere tranquilo. Este sitio es SEGURO <strike>Sergio</strike> para realizar compras electronicas.</font>
+	<br><font color = "red" >Opere tranquilo. Este sitio es seguro para realizar compras electronicas.</font>
 </small>
 <br><br>
 <img src="/img/tcredito.png" width="30%" style="margin-left:30%">

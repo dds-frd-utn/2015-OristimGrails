@@ -354,8 +354,8 @@ cursor: pointer;
 <div class="mid">
 <a href="/" class=""><img src="/img/oristimPiola.png" style="margin-top:10px; margin-left: -20%;"width="20%"></a>
 <a href="/" class=""><img src="/img/hardcode.png" style=""width="27%"></a>
-<h3>Compra Basicamente Realizada.</h3>
-<p>Queremos agradecerle a usted, basicamente, por comprar nuestros productos de porqueria que ofrecemos. Jajaja, saludos.</p>
+<h3>Muchas Gracias.</h3>
+<p>Su compra se ha realizado con exito. Esperamos que disfrute del producto.</p>
 <button class="win8-notif-button"  onclick="window.location.href='/venta'">Mis Compras</button>
 <button class="win8-notif-button" id="movida">Volver al Menu</button>
 </div>
