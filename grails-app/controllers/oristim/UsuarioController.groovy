@@ -25,6 +25,7 @@ class UsuarioController {
 
     @Transactional
     def save(Usuario usuarioInstance) {
+
         if (usuarioInstance == null) {
             notFound()
             return
@@ -35,9 +36,24 @@ class UsuarioController {
             return
         }
 
-        usuarioInstance.save flush:true
+        if (params.password != params.repassword) {
+             return
+           }
+
+        //usuarioInstance.save flush:true
         
-        //Una vez que lo guarda volvemos a la pagina principal
+      
+       
+        def nu = new Usuario([
+                  nombre:  params.nombre
+                , apellido: params.apellido
+                , email: params.email
+                , username: params.username
+                , password: params.password
+            ]).save(flush:true) 
+
+            //Una vez que lo guarda volvemos a la pagina principal 
+
         redirect(uri: "")
 
     }
