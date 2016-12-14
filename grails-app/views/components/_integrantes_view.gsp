@@ -3,7 +3,7 @@
   <div class="modal-content">
     <h4>Martin De Gesus</h4>
       <img src="/img/integrantes/guru.jpg"> 
-      <p>Leecher.</p>
+      <p>Desarrollador Back-end y revisión de documentación.</p>
   </div>
   <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
