@@ -9,14 +9,14 @@ package oristim
 
 class CarritoTemp {
 	
-	/** Basicamente una lista de juegos */
     List juegos = []
-	/** la lista tiene muchos juegos */
+
 	static hasMany = [juegos: Juego]
-    /** Basicamente una lista de juegos */
+
 	static mapping = {
+		
 	}
-	/** Basicamente una lista de juegos */
+
 	static constraints = {
 		juegos nullable: true
     }

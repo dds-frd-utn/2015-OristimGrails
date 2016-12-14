@@ -1,22 +1,11 @@
 package oristim
 
-/**
-* El usuario identifica a una persona.
-* a un cliente ...
-*/
-
 class Usuario {
-	// nombre con el que se logea
 	String username
-	// contraseña
 	String password
-	// nombre del chabon
 	String nombre
-	// apellido
 	String apellido
-	// el email
 	String email
-	// El carrito temporal.
 	CarritoTemp carritoTemp
 
 	static mapping = {
@@ -34,7 +23,6 @@ class Usuario {
 
 	}
 
-	// Defino los seters y los geters solo porque la clase Session Manager los necesita.
 	String getUsername(){
 		return username
 	}

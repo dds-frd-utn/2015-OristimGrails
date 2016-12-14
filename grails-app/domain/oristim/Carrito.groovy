@@ -13,15 +13,13 @@ class Carrito {
     // Una lista de juegos agregados.
     List juegos = []
 	static hasMany = [juegos: Juego]
-	//static hasOne = [usuario:Usuario]
         
 	static mapping = {
 		version false
 	}
 
 	static constraints = {
-                //usuario nullable: false
-                estado maxSize: 1
+    	estado maxSize: 1
 	}
 
 	def setUsuario(Usuario u){
@@ -38,6 +36,5 @@ class Carrito {
 	String getEstado(){
 		return this.estado
 	}
-        
- 
+	
 }
