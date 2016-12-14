@@ -27,7 +27,7 @@
   <div class="modal-content">
     <h4>Martin Galeano</h4> 
       <img src="/img/integrantes/martin.jpg"> 
-      <p>Desarrollador Back-end.</p>
+      <p>Infraestructura y Desarrollador Back-end.</p>
   </div>
   <div class="modal-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
